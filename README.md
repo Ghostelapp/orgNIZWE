@@ -125,6 +125,8 @@ Wymaga skonfigurowania sekretów w repozytorium GitHub:
 - `APPLE_API_KEY_ID` — Key ID z App Store Connect
 - `APPLE_API_PRIVATE_KEY` — klucz prywatny API z App Store Connect (cała zawartość pliku `.p8`)
 
+Workflow obsługuje też alternatywne nazwy sekretów: `BUILD_CERTIFICATE_BASE64` / `APPLE_CERTIFICATE_BASE64`, `P12_PASSWORD` / `BUILD_CERTIFICATE_PASSWORD`, `APPSTORE_ISSUER_ID`, `APPSTORE_KEY_ID`, `APPSTORE_PRIVATE_KEY`.
+
 Przed uruchomieniem uzupełnij `ExportOptions.plist` swoim `Team ID`.
 
 Workflow uruchamiasz ręcznie z zakładki **Actions → iOS Release Build → Run workflow**, podając numer wersji i numer buildu.

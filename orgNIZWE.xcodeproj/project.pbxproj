@@ -7,126 +7,126 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D71DB4611BB41D6911A4BA5 /* in Sources */ = {isa = PBXBuildFile; fileRef = 008D44FA5FB14CBFAEE4E73D /* ContentView.swift */; };
-		F16E1982515E43B79CFD61CF /* in Sources */ = {isa = PBXBuildFile; fileRef = 78939475F50A416F8D31CAC8 /* orgNIZWEApp.swift */; };
-		2E603240CA8746C599534544 /* in Sources */ = {isa = PBXBuildFile; fileRef = D29B22F922614412A8EBAD56 /* AddTaskIntent.swift */; };
-		65EC68809A66443ABB36A725 /* in Sources */ = {isa = PBXBuildFile; fileRef = 423C5B6F04584B6AAF2D6156 /* EventItem.swift */; };
-		B3E45DCD511E490882CF4BE2 /* in Sources */ = {isa = PBXBuildFile; fileRef = 857DFD0146A94D5F96A27969 /* Habit.swift */; };
-		8BB4B7AB0FD347709CC1BEC3 /* in Sources */ = {isa = PBXBuildFile; fileRef = 1AAEA43030A74DE1BD43687E /* LifeItem.swift */; };
-		8D99C780129C42D9A8D20064 /* in Sources */ = {isa = PBXBuildFile; fileRef = 9A469F7BE8454D8491A109B0 /* NoteItem.swift */; };
-		7E57599AB76E4014A7F27D74 /* in Sources */ = {isa = PBXBuildFile; fileRef = 32C7F786C24C4B8586A4ACF7 /* ReminderItem.swift */; };
-		9966AEBAD9684FF5A76161BB /* in Sources */ = {isa = PBXBuildFile; fileRef = D343AD59686E4F1B80109388 /* ShoppingList.swift */; };
-		B1E74DA9643E4DF390B984CE /* in Sources */ = {isa = PBXBuildFile; fileRef = D0C5570DB8184F608C0AEC5C /* TaskItem.swift */; };
-		58FA84519C734A7C8860C559 /* in Sources */ = {isa = PBXBuildFile; fileRef = 60F2142D1EDF420D971339D0 /* UserPreferences.swift */; };
-		EF8B45C6F7BE404398A6263C /* in Sources */ = {isa = PBXBuildFile; fileRef = B6EE904299B04B65BAC940A6 /* AIService.swift */; };
-		E645A156D6954FFFA810B574 /* in Sources */ = {isa = PBXBuildFile; fileRef = 81169F2E76594CF68E141BDD /* EventKitService.swift */; };
-		29CCDDE8D3A54AEDB4267BD2 /* in Sources */ = {isa = PBXBuildFile; fileRef = B89FA760D7AA4A8DAD00E7FB /* HapticService.swift */; };
-		1174989351834899A72627DF /* in Sources */ = {isa = PBXBuildFile; fileRef = D8B8E1D945164F5E9AFF386C /* HealthKitService.swift */; };
-		060902CD040048D99C2C2A17 /* in Sources */ = {isa = PBXBuildFile; fileRef = 6D8680C6DFC442B8A0F3EC30 /* NotificationService.swift */; };
-		7D4AB04A978C4B2A86771A95 /* in Sources */ = {isa = PBXBuildFile; fileRef = CD2EFEC51CAF4B38A17A4CAE /* AIAssistantViewModel.swift */; };
-		57F14E3E48694F5F885904A3 /* in Sources */ = {isa = PBXBuildFile; fileRef = 6A2706ADD19F4320AD3864B3 /* CalendarViewModel.swift */; };
-		3B047DB26ECB4001BE6EF320 /* in Sources */ = {isa = PBXBuildFile; fileRef = 5D1789E510504975ADB2EBD5 /* HabitsViewModel.swift */; };
-		1FD12F32B9A54B69AEAA936F /* in Sources */ = {isa = PBXBuildFile; fileRef = 4FCA1CA8064947A798F92ADF /* ShoppingViewModel.swift */; };
-		410F785FED054471B3996CAA /* in Sources */ = {isa = PBXBuildFile; fileRef = 9F6B2D572046400B9BBD7120 /* TasksViewModel.swift */; };
-		4B6BC625657C4CDCA7D037F6 /* in Sources */ = {isa = PBXBuildFile; fileRef = BA519C6C2A3C43168CDA404F /* TodayViewModel.swift */; };
-		12529D09838E4712BB4BBCAB /* in Sources */ = {isa = PBXBuildFile; fileRef = F01B79D0207849AAB9966797 /* AIAssistantView.swift */; };
-		B7D332FF63E645D494FFF8A7 /* in Sources */ = {isa = PBXBuildFile; fileRef = B1337A7FDAEF4DCD9124DC32 /* CalendarView.swift */; };
-		F4875EC03C3947D89823A348 /* in Sources */ = {isa = PBXBuildFile; fileRef = 4879BB93FA43415E875598BD /* EventEditView.swift */; };
-		91C08123876D435B8CF5EA10 /* in Sources */ = {isa = PBXBuildFile; fileRef = E218CF27CD724D808151D8A1 /* QuickAddView.swift */; };
-		6C827B1C69064A9E85A49BC3 /* in Sources */ = {isa = PBXBuildFile; fileRef = 38CCF2BDC7EA46C8A528E031 /* HabitEditView.swift */; };
-		EB7E7BD567494DB6911F6106 /* in Sources */ = {isa = PBXBuildFile; fileRef = AE8D9F072F434A6CBFD16991 /* HabitsView.swift */; };
-		5FA93181095E48EDA38A997F /* in Sources */ = {isa = PBXBuildFile; fileRef = F88B859E0386401EBF220D47 /* OnboardingView.swift */; };
-		D809EB5B2F514361981CC1AC /* in Sources */ = {isa = PBXBuildFile; fileRef = E326992C8E0C4DC6B486322D /* LifeCategoryDetailView.swift */; };
-		46303D01A0FA469A95B992B8 /* in Sources */ = {isa = PBXBuildFile; fileRef = 3317DD469CB544A391087E2A /* LifeItemEditView.swift */; };
-		DA3975637C224BFCBC877F2E /* in Sources */ = {isa = PBXBuildFile; fileRef = 793653251FC84732B4755095 /* OrganizationView.swift */; };
-		1A83D189C13B42088FB4F937 /* in Sources */ = {isa = PBXBuildFile; fileRef = 035CDE11980340D28E7F4D58 /* AISettingsView.swift */; };
-		FE42308114B541558E04A7B9 /* in Sources */ = {isa = PBXBuildFile; fileRef = C25214E1F93C4565BB1D3527 /* FavoriteCategoriesView.swift */; };
-		8817292EC05A478B9604A00A /* in Sources */ = {isa = PBXBuildFile; fileRef = 8A4487FFBC9B4613AE25B142 /* ModuleOrderView.swift */; };
-		7DBD566D4D2C434DBF9ED038 /* in Sources */ = {isa = PBXBuildFile; fileRef = FAAA9D877882499390B3FC08 /* ProfileView.swift */; };
-		DD666661769A42FAA234D0FE /* in Sources */ = {isa = PBXBuildFile; fileRef = C84E2832B4AB4602BCE2F2C2 /* ShoppingListDetailView.swift */; };
-		58BD9A502DC94F0B8B83E357 /* in Sources */ = {isa = PBXBuildFile; fileRef = 40968813D7914B45B07608C7 /* ShoppingListEditView.swift */; };
-		8E83BC8759284E72AA4F24AC /* in Sources */ = {isa = PBXBuildFile; fileRef = 628D21D9B0B549B9B55F630C /* ShoppingView.swift */; };
-		2396AD7F607644E0A45819FE /* in Sources */ = {isa = PBXBuildFile; fileRef = 053D8A31BA314FD9AB03DAC8 /* TaskEditView.swift */; };
-		4776A51734CB481FBE69C5D6 /* in Sources */ = {isa = PBXBuildFile; fileRef = 392764C34E644E2D97415627 /* TasksView.swift */; };
-		9F0CD21A8FF842F7871E04D3 /* in Sources */ = {isa = PBXBuildFile; fileRef = 863F1E9DBDA346A886CE5373 /* NextEventSection.swift */; };
-		E1A23B2A79324172BCB57C98 /* in Sources */ = {isa = PBXBuildFile; fileRef = 26DB0885D3F44452B0B6ED77 /* QuickActionsSection.swift */; };
-		EF9D154162824205BEF7E0F8 /* in Sources */ = {isa = PBXBuildFile; fileRef = D387ACF55A9146F58EC61D83 /* TodayHabitsSection.swift */; };
-		693680E7E2EA40FF81951DF4 /* in Sources */ = {isa = PBXBuildFile; fileRef = 79FA22F26477408BA2ABA1DF /* TodayRemindersSection.swift */; };
-		F8F56BB7AAD24F53B0589149 /* in Sources */ = {isa = PBXBuildFile; fileRef = 61747A2DCC2B4C9892F00DAD /* TodayView.swift */; };
-		104FE1D23A554770A3ECB784 /* in Sources */ = {isa = PBXBuildFile; fileRef = 55FBDC5F34AA4750802F2D5C /* TopTasksSection.swift */; };
-		4CFEC2FA1AA3461AA4A9523D /* in Sources */ = {isa = PBXBuildFile; fileRef = 0946BD7744234CA08FEFC9E8 /* HabitsWidget.swift */; };
-		48B2C482BDCF4D4287E544B5 /* in Sources */ = {isa = PBXBuildFile; fileRef = C7114EE950A74239A04C6993 /* NextEventWidget.swift */; };
-		00F6A150C9A746C580BAC1D5 /* in Sources */ = {isa = PBXBuildFile; fileRef = 6A9A7B705A7542C3B48D5087 /* TodayWidget.swift */; };
-		6FC0D880EFE1478FB269581A /* in Sources */ = {isa = PBXBuildFile; fileRef = 7DA2549A12624C5CB9217A3B /* TopTasksWidget.swift */; };
-		9F6C1FD6527B41AD826C9DC3 /* in Sources */ = {isa = PBXBuildFile; fileRef = 3CC84C3F0B9A4C68BE6E2A21 /* WidgetModels.swift */; };
-		74B02AAA44EF437CB0FF938D /* in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEAF5BEDD548FB94035A40 /* WidgetProvider.swift */; };
-		9AF3D447A26343E8AA7C70F0 /* in Sources */ = {isa = PBXBuildFile; fileRef = 50ECCCA08C7D422F8551848A /* orgNIZWEWidgetsBundle.swift */; };
+		56DBBBE55E274C8B98144B53 /* in Sources */ = {isa = PBXBuildFile; fileRef = 19AA111D66A144B3A30409D3 /* ContentView.swift */; };
+		F6BA34A3B8FE4A84A01BDA36 /* in Sources */ = {isa = PBXBuildFile; fileRef = 0AE38ED59612497AB47853BE /* orgNIZWEApp.swift */; };
+		9020FEDCC15A4B6B86B89E20 /* in Sources */ = {isa = PBXBuildFile; fileRef = 779DE514C94843AC9A8F5332 /* AddTaskIntent.swift */; };
+		3EF1FF6982B74B14B3DB953F /* in Sources */ = {isa = PBXBuildFile; fileRef = A02E8E55EA114DF9B94F71A8 /* EventItem.swift */; };
+		F4BC9B66972E4653BD85238C /* in Sources */ = {isa = PBXBuildFile; fileRef = 24B0DFDC58A342D8BF77E469 /* Habit.swift */; };
+		197A49990A544643AEF2F58E /* in Sources */ = {isa = PBXBuildFile; fileRef = 3A83CCB8931442ACB897837F /* LifeItem.swift */; };
+		080A2D66A8C848E2B18A5E96 /* in Sources */ = {isa = PBXBuildFile; fileRef = 4E39D092C79C46DEB08CA7E3 /* NoteItem.swift */; };
+		7B5CD1382D644B2DAAD370EB /* in Sources */ = {isa = PBXBuildFile; fileRef = 340F85A2D5E747889D49DD15 /* ReminderItem.swift */; };
+		E3479FBFFFC7440A82C33533 /* in Sources */ = {isa = PBXBuildFile; fileRef = 1F1061130D7C4D469E2B6CE2 /* ShoppingList.swift */; };
+		52EB3085033E4BE493AAC43F /* in Sources */ = {isa = PBXBuildFile; fileRef = E883B36885244D11A982F114 /* TaskItem.swift */; };
+		130A9938352B4B38901E4EED /* in Sources */ = {isa = PBXBuildFile; fileRef = 9C51FDF26B724BEAA3E4AA0F /* UserPreferences.swift */; };
+		E42360D9AA844C419626CDA5 /* in Sources */ = {isa = PBXBuildFile; fileRef = 0864AA1918544E6A984EEF4B /* AIService.swift */; };
+		7D471C88D8C64BA0AE908CD1 /* in Sources */ = {isa = PBXBuildFile; fileRef = F260505D16144D04B257FDB2 /* EventKitService.swift */; };
+		1988601B3B56485E8162C065 /* in Sources */ = {isa = PBXBuildFile; fileRef = 619F20762E024FEDBF5AFFEF /* HapticService.swift */; };
+		47AB03442F964A37AD61DF5F /* in Sources */ = {isa = PBXBuildFile; fileRef = 849AA2065BA74020AE0DA12F /* HealthKitService.swift */; };
+		359154744ED343E298243DC5 /* in Sources */ = {isa = PBXBuildFile; fileRef = 7F46072F254A4DB1BD9158A1 /* NotificationService.swift */; };
+		B438101A4C5646AFB15A864F /* in Sources */ = {isa = PBXBuildFile; fileRef = B8A2B90481BD42C4BA5E54D6 /* AIAssistantViewModel.swift */; };
+		E614B16D3E8C4E8BBAB0BC1F /* in Sources */ = {isa = PBXBuildFile; fileRef = 3EB187AB13334418A1B4EB61 /* CalendarViewModel.swift */; };
+		84038032C156437FA3E7D895 /* in Sources */ = {isa = PBXBuildFile; fileRef = CB9CF51602D34160A2D59B42 /* HabitsViewModel.swift */; };
+		C686429080CE475BBE4327B9 /* in Sources */ = {isa = PBXBuildFile; fileRef = 96048E0D0C884CE0B2FBE49B /* ShoppingViewModel.swift */; };
+		A03ABF79128542E395CD89B3 /* in Sources */ = {isa = PBXBuildFile; fileRef = F1301FE325954C369E887422 /* TasksViewModel.swift */; };
+		192837825DEB4493B1DB843C /* in Sources */ = {isa = PBXBuildFile; fileRef = E36285F64A4C4837B2C46B83 /* TodayViewModel.swift */; };
+		AFD19B8C22D64B82AB5F3C79 /* in Sources */ = {isa = PBXBuildFile; fileRef = 90AAD676546547F4B0A39291 /* AIAssistantView.swift */; };
+		CF1B150876684B19B188B223 /* in Sources */ = {isa = PBXBuildFile; fileRef = 76738FC7E9A04984A197B772 /* CalendarView.swift */; };
+		F38EBCAE184D49FFB29400A6 /* in Sources */ = {isa = PBXBuildFile; fileRef = 91A6A7C008094F9CABC0B96D /* EventEditView.swift */; };
+		E28373A602EA4941A225964D /* in Sources */ = {isa = PBXBuildFile; fileRef = 29CB0ED6DE20484FBA79B9BA /* QuickAddView.swift */; };
+		592911D5254246FCBB378191 /* in Sources */ = {isa = PBXBuildFile; fileRef = 0D572C5A726E4787A2A6AB25 /* HabitEditView.swift */; };
+		CFAD042BA87F483989DB34A1 /* in Sources */ = {isa = PBXBuildFile; fileRef = C5A9490A76CC49B08C13CEB1 /* HabitsView.swift */; };
+		A29C331C9A904851AB3C891E /* in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4F172EA524D53AB1B3D83 /* OnboardingView.swift */; };
+		96C4102AF9B0474B8EFFA867 /* in Sources */ = {isa = PBXBuildFile; fileRef = 16262D67FCC74B3A82137C1A /* LifeCategoryDetailView.swift */; };
+		1F6F9B27BC4B4698AB0C1602 /* in Sources */ = {isa = PBXBuildFile; fileRef = AED81326F5444584AD5095AA /* LifeItemEditView.swift */; };
+		F068F55A37534C9F91906628 /* in Sources */ = {isa = PBXBuildFile; fileRef = 4A89EA4613D9448C8A6580A6 /* OrganizationView.swift */; };
+		DBED9D0E841D4DC3AC9BEA15 /* in Sources */ = {isa = PBXBuildFile; fileRef = 7B9E853A00374FB7828C92D6 /* AISettingsView.swift */; };
+		62538ED539B945F39299BF1D /* in Sources */ = {isa = PBXBuildFile; fileRef = FE89F86E256C4DAE94E6854E /* FavoriteCategoriesView.swift */; };
+		6AA3DB78EDA14405ADA321B3 /* in Sources */ = {isa = PBXBuildFile; fileRef = 95A259A6694843258D470402 /* ModuleOrderView.swift */; };
+		3F0CF09BF74044E7BC515208 /* in Sources */ = {isa = PBXBuildFile; fileRef = 388E7D8085984DA2B723E259 /* ProfileView.swift */; };
+		29E4CA80A39D48069BD22F95 /* in Sources */ = {isa = PBXBuildFile; fileRef = A3FB5C3A06AA473DBB2D27D7 /* ShoppingListDetailView.swift */; };
+		A39CB489E9DF4631A46C2749 /* in Sources */ = {isa = PBXBuildFile; fileRef = 8A09C23A4BC14FA7AE5639AF /* ShoppingListEditView.swift */; };
+		2602D92A1E4D4ED3AC1EB106 /* in Sources */ = {isa = PBXBuildFile; fileRef = 7E85B2F4660F414EBC57E0E8 /* ShoppingView.swift */; };
+		21129A8A81A34717B9CB0308 /* in Sources */ = {isa = PBXBuildFile; fileRef = 8FEA8BB99CA140A481DD51F2 /* TaskEditView.swift */; };
+		D47FFA85B444430CBDEE1C55 /* in Sources */ = {isa = PBXBuildFile; fileRef = 9EC18E20315A4246A101F9E1 /* TasksView.swift */; };
+		AC87AC76B4B44941BA8CB930 /* in Sources */ = {isa = PBXBuildFile; fileRef = A2753F6F6533444FA24D2464 /* NextEventSection.swift */; };
+		BA02B405075147A3A061F7B0 /* in Sources */ = {isa = PBXBuildFile; fileRef = A5D062ECAD444AFFACC73C01 /* QuickActionsSection.swift */; };
+		3178C10947F34157A9D50A92 /* in Sources */ = {isa = PBXBuildFile; fileRef = 153B0C6AC2864EB1A862D532 /* TodayHabitsSection.swift */; };
+		B48AFD8EFAD44F0EA50A9E5F /* in Sources */ = {isa = PBXBuildFile; fileRef = 657F47BD7B124BF9B074BA05 /* TodayRemindersSection.swift */; };
+		D63F7C68FB944EEFA58F5140 /* in Sources */ = {isa = PBXBuildFile; fileRef = 676EADA329B245418315ECD3 /* TodayView.swift */; };
+		5153F70AB367465381CF2EB7 /* in Sources */ = {isa = PBXBuildFile; fileRef = E731CB780C6443D6A4889823 /* TopTasksSection.swift */; };
+		E62DB11DECC945CF8F3BEAF3 /* in Sources */ = {isa = PBXBuildFile; fileRef = A3E932D5BD6D48E796CA1240 /* HabitsWidget.swift */; };
+		00B6CC55CCE845D3B55013DB /* in Sources */ = {isa = PBXBuildFile; fileRef = 966B5CC98A714E4D90E48DF9 /* NextEventWidget.swift */; };
+		08C9AF389B4B4BFDB398681C /* in Sources */ = {isa = PBXBuildFile; fileRef = 2E23ADABC73D4E97AE92EF20 /* TodayWidget.swift */; };
+		F7D97C9515324E7BAC1522A7 /* in Sources */ = {isa = PBXBuildFile; fileRef = FD1D742EC2104105B66303F4 /* TopTasksWidget.swift */; };
+		FC20736B46244BF8A60DC503 /* in Sources */ = {isa = PBXBuildFile; fileRef = 68DB7547F85246AEA3C8DBB9 /* WidgetModels.swift */; };
+		FB0E4CA0EE52448E87B4ABC4 /* in Sources */ = {isa = PBXBuildFile; fileRef = 0E488795CF264FEFAC078D71 /* WidgetProvider.swift */; };
+		0E9E900FE4FA4A2CAED4EE62 /* in Sources */ = {isa = PBXBuildFile; fileRef = 8E27F1897EB5432E94A463EE /* orgNIZWEWidgetsBundle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		008D44FA5FB14CBFAEE4E73D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/ContentView.swift"; sourceTree = "<group>"; };
-		78939475F50A416F8D31CAC8 /* orgNIZWEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/orgNIZWEApp.swift"; sourceTree = "<group>"; };
-		D29B22F922614412A8EBAD56 /* AddTaskIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/AppIntents/AddTaskIntent.swift"; sourceTree = "<group>"; };
-		423C5B6F04584B6AAF2D6156 /* EventItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Models/EventItem.swift"; sourceTree = "<group>"; };
-		857DFD0146A94D5F96A27969 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Models/Habit.swift"; sourceTree = "<group>"; };
-		1AAEA43030A74DE1BD43687E /* LifeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Models/LifeItem.swift"; sourceTree = "<group>"; };
-		9A469F7BE8454D8491A109B0 /* NoteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Models/NoteItem.swift"; sourceTree = "<group>"; };
-		32C7F786C24C4B8586A4ACF7 /* ReminderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Models/ReminderItem.swift"; sourceTree = "<group>"; };
-		D343AD59686E4F1B80109388 /* ShoppingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Models/ShoppingList.swift"; sourceTree = "<group>"; };
-		D0C5570DB8184F608C0AEC5C /* TaskItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Models/TaskItem.swift"; sourceTree = "<group>"; };
-		60F2142D1EDF420D971339D0 /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Models/UserPreferences.swift"; sourceTree = "<group>"; };
-		B6EE904299B04B65BAC940A6 /* AIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Services/AIService.swift"; sourceTree = "<group>"; };
-		81169F2E76594CF68E141BDD /* EventKitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Services/EventKitService.swift"; sourceTree = "<group>"; };
-		B89FA760D7AA4A8DAD00E7FB /* HapticService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Services/HapticService.swift"; sourceTree = "<group>"; };
-		D8B8E1D945164F5E9AFF386C /* HealthKitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Services/HealthKitService.swift"; sourceTree = "<group>"; };
-		6D8680C6DFC442B8A0F3EC30 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Services/NotificationService.swift"; sourceTree = "<group>"; };
-		CD2EFEC51CAF4B38A17A4CAE /* AIAssistantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/ViewModels/AIAssistantViewModel.swift"; sourceTree = "<group>"; };
-		6A2706ADD19F4320AD3864B3 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/ViewModels/CalendarViewModel.swift"; sourceTree = "<group>"; };
-		5D1789E510504975ADB2EBD5 /* HabitsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/ViewModels/HabitsViewModel.swift"; sourceTree = "<group>"; };
-		4FCA1CA8064947A798F92ADF /* ShoppingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/ViewModels/ShoppingViewModel.swift"; sourceTree = "<group>"; };
-		9F6B2D572046400B9BBD7120 /* TasksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/ViewModels/TasksViewModel.swift"; sourceTree = "<group>"; };
-		BA519C6C2A3C43168CDA404F /* TodayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/ViewModels/TodayViewModel.swift"; sourceTree = "<group>"; };
-		F01B79D0207849AAB9966797 /* AIAssistantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/AI/AIAssistantView.swift"; sourceTree = "<group>"; };
-		B1337A7FDAEF4DCD9124DC32 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Calendar/CalendarView.swift"; sourceTree = "<group>"; };
-		4879BB93FA43415E875598BD /* EventEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Calendar/EventEditView.swift"; sourceTree = "<group>"; };
-		E218CF27CD724D808151D8A1 /* QuickAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Common/QuickAddView.swift"; sourceTree = "<group>"; };
-		38CCF2BDC7EA46C8A528E031 /* HabitEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Habits/HabitEditView.swift"; sourceTree = "<group>"; };
-		AE8D9F072F434A6CBFD16991 /* HabitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Habits/HabitsView.swift"; sourceTree = "<group>"; };
-		F88B859E0386401EBF220D47 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Onboarding/OnboardingView.swift"; sourceTree = "<group>"; };
-		E326992C8E0C4DC6B486322D /* LifeCategoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Organization/LifeCategoryDetailView.swift"; sourceTree = "<group>"; };
-		3317DD469CB544A391087E2A /* LifeItemEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Organization/LifeItemEditView.swift"; sourceTree = "<group>"; };
-		793653251FC84732B4755095 /* OrganizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Organization/OrganizationView.swift"; sourceTree = "<group>"; };
-		035CDE11980340D28E7F4D58 /* AISettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Profile/AISettingsView.swift"; sourceTree = "<group>"; };
-		C25214E1F93C4565BB1D3527 /* FavoriteCategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Profile/FavoriteCategoriesView.swift"; sourceTree = "<group>"; };
-		8A4487FFBC9B4613AE25B142 /* ModuleOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Profile/ModuleOrderView.swift"; sourceTree = "<group>"; };
-		FAAA9D877882499390B3FC08 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Profile/ProfileView.swift"; sourceTree = "<group>"; };
-		C84E2832B4AB4602BCE2F2C2 /* ShoppingListDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Shopping/ShoppingListDetailView.swift"; sourceTree = "<group>"; };
-		40968813D7914B45B07608C7 /* ShoppingListEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Shopping/ShoppingListEditView.swift"; sourceTree = "<group>"; };
-		628D21D9B0B549B9B55F630C /* ShoppingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Shopping/ShoppingView.swift"; sourceTree = "<group>"; };
-		053D8A31BA314FD9AB03DAC8 /* TaskEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Tasks/TaskEditView.swift"; sourceTree = "<group>"; };
-		392764C34E644E2D97415627 /* TasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Tasks/TasksView.swift"; sourceTree = "<group>"; };
-		863F1E9DBDA346A886CE5373 /* NextEventSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Today/NextEventSection.swift"; sourceTree = "<group>"; };
-		26DB0885D3F44452B0B6ED77 /* QuickActionsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Today/QuickActionsSection.swift"; sourceTree = "<group>"; };
-		D387ACF55A9146F58EC61D83 /* TodayHabitsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Today/TodayHabitsSection.swift"; sourceTree = "<group>"; };
-		79FA22F26477408BA2ABA1DF /* TodayRemindersSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Today/TodayRemindersSection.swift"; sourceTree = "<group>"; };
-		61747A2DCC2B4C9892F00DAD /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Today/TodayView.swift"; sourceTree = "<group>"; };
-		55FBDC5F34AA4750802F2D5C /* TopTasksSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Today/TopTasksSection.swift"; sourceTree = "<group>"; };
-		0946BD7744234CA08FEFC9E8 /* HabitsWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWEWidgets/HabitsWidget.swift"; sourceTree = "<group>"; };
-		C7114EE950A74239A04C6993 /* NextEventWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWEWidgets/NextEventWidget.swift"; sourceTree = "<group>"; };
-		6A9A7B705A7542C3B48D5087 /* TodayWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWEWidgets/TodayWidget.swift"; sourceTree = "<group>"; };
-		7DA2549A12624C5CB9217A3B /* TopTasksWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWEWidgets/TopTasksWidget.swift"; sourceTree = "<group>"; };
-		3CC84C3F0B9A4C68BE6E2A21 /* WidgetModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWEWidgets/WidgetModels.swift"; sourceTree = "<group>"; };
-		3AAEAF5BEDD548FB94035A40 /* WidgetProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWEWidgets/WidgetProvider.swift"; sourceTree = "<group>"; };
-		50ECCCA08C7D422F8551848A /* orgNIZWEWidgetsBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWEWidgets/orgNIZWEWidgetsBundle.swift"; sourceTree = "<group>"; };
-		B265637919ED4C95B8BDBE6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = orgNIZWE/Info.plist; sourceTree = "<group>"; };
-		8CAC87F4CBC042E0AC7668C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = orgNIZWE/Assets.xcassets; sourceTree = "<group>"; };
-		DD45CA504EB14AF18AB1F3BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = orgNIZWEWidgets/Info.plist; sourceTree = "<group>"; };
-		CD0D39C3C4624C99A0CED73A /* orgNIZWE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = orgNIZWE.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		56459C81C32B4F12B9CC2978 /* orgNIZWEWidgets.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = orgNIZWEWidgets.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		19AA111D66A144B3A30409D3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/ContentView.swift"; sourceTree = "<group>"; };
+		0AE38ED59612497AB47853BE /* orgNIZWEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/orgNIZWEApp.swift"; sourceTree = "<group>"; };
+		779DE514C94843AC9A8F5332 /* AddTaskIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/AppIntents/AddTaskIntent.swift"; sourceTree = "<group>"; };
+		A02E8E55EA114DF9B94F71A8 /* EventItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Models/EventItem.swift"; sourceTree = "<group>"; };
+		24B0DFDC58A342D8BF77E469 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Models/Habit.swift"; sourceTree = "<group>"; };
+		3A83CCB8931442ACB897837F /* LifeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Models/LifeItem.swift"; sourceTree = "<group>"; };
+		4E39D092C79C46DEB08CA7E3 /* NoteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Models/NoteItem.swift"; sourceTree = "<group>"; };
+		340F85A2D5E747889D49DD15 /* ReminderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Models/ReminderItem.swift"; sourceTree = "<group>"; };
+		1F1061130D7C4D469E2B6CE2 /* ShoppingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Models/ShoppingList.swift"; sourceTree = "<group>"; };
+		E883B36885244D11A982F114 /* TaskItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Models/TaskItem.swift"; sourceTree = "<group>"; };
+		9C51FDF26B724BEAA3E4AA0F /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Models/UserPreferences.swift"; sourceTree = "<group>"; };
+		0864AA1918544E6A984EEF4B /* AIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Services/AIService.swift"; sourceTree = "<group>"; };
+		F260505D16144D04B257FDB2 /* EventKitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Services/EventKitService.swift"; sourceTree = "<group>"; };
+		619F20762E024FEDBF5AFFEF /* HapticService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Services/HapticService.swift"; sourceTree = "<group>"; };
+		849AA2065BA74020AE0DA12F /* HealthKitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Services/HealthKitService.swift"; sourceTree = "<group>"; };
+		7F46072F254A4DB1BD9158A1 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Services/NotificationService.swift"; sourceTree = "<group>"; };
+		B8A2B90481BD42C4BA5E54D6 /* AIAssistantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/ViewModels/AIAssistantViewModel.swift"; sourceTree = "<group>"; };
+		3EB187AB13334418A1B4EB61 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/ViewModels/CalendarViewModel.swift"; sourceTree = "<group>"; };
+		CB9CF51602D34160A2D59B42 /* HabitsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/ViewModels/HabitsViewModel.swift"; sourceTree = "<group>"; };
+		96048E0D0C884CE0B2FBE49B /* ShoppingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/ViewModels/ShoppingViewModel.swift"; sourceTree = "<group>"; };
+		F1301FE325954C369E887422 /* TasksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/ViewModels/TasksViewModel.swift"; sourceTree = "<group>"; };
+		E36285F64A4C4837B2C46B83 /* TodayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/ViewModels/TodayViewModel.swift"; sourceTree = "<group>"; };
+		90AAD676546547F4B0A39291 /* AIAssistantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/AI/AIAssistantView.swift"; sourceTree = "<group>"; };
+		76738FC7E9A04984A197B772 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Calendar/CalendarView.swift"; sourceTree = "<group>"; };
+		91A6A7C008094F9CABC0B96D /* EventEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Calendar/EventEditView.swift"; sourceTree = "<group>"; };
+		29CB0ED6DE20484FBA79B9BA /* QuickAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Common/QuickAddView.swift"; sourceTree = "<group>"; };
+		0D572C5A726E4787A2A6AB25 /* HabitEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Habits/HabitEditView.swift"; sourceTree = "<group>"; };
+		C5A9490A76CC49B08C13CEB1 /* HabitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Habits/HabitsView.swift"; sourceTree = "<group>"; };
+		7EF4F172EA524D53AB1B3D83 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Onboarding/OnboardingView.swift"; sourceTree = "<group>"; };
+		16262D67FCC74B3A82137C1A /* LifeCategoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Organization/LifeCategoryDetailView.swift"; sourceTree = "<group>"; };
+		AED81326F5444584AD5095AA /* LifeItemEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Organization/LifeItemEditView.swift"; sourceTree = "<group>"; };
+		4A89EA4613D9448C8A6580A6 /* OrganizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Organization/OrganizationView.swift"; sourceTree = "<group>"; };
+		7B9E853A00374FB7828C92D6 /* AISettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Profile/AISettingsView.swift"; sourceTree = "<group>"; };
+		FE89F86E256C4DAE94E6854E /* FavoriteCategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Profile/FavoriteCategoriesView.swift"; sourceTree = "<group>"; };
+		95A259A6694843258D470402 /* ModuleOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Profile/ModuleOrderView.swift"; sourceTree = "<group>"; };
+		388E7D8085984DA2B723E259 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Profile/ProfileView.swift"; sourceTree = "<group>"; };
+		A3FB5C3A06AA473DBB2D27D7 /* ShoppingListDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Shopping/ShoppingListDetailView.swift"; sourceTree = "<group>"; };
+		8A09C23A4BC14FA7AE5639AF /* ShoppingListEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Shopping/ShoppingListEditView.swift"; sourceTree = "<group>"; };
+		7E85B2F4660F414EBC57E0E8 /* ShoppingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Shopping/ShoppingView.swift"; sourceTree = "<group>"; };
+		8FEA8BB99CA140A481DD51F2 /* TaskEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Tasks/TaskEditView.swift"; sourceTree = "<group>"; };
+		9EC18E20315A4246A101F9E1 /* TasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Tasks/TasksView.swift"; sourceTree = "<group>"; };
+		A2753F6F6533444FA24D2464 /* NextEventSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Today/NextEventSection.swift"; sourceTree = "<group>"; };
+		A5D062ECAD444AFFACC73C01 /* QuickActionsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Today/QuickActionsSection.swift"; sourceTree = "<group>"; };
+		153B0C6AC2864EB1A862D532 /* TodayHabitsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Today/TodayHabitsSection.swift"; sourceTree = "<group>"; };
+		657F47BD7B124BF9B074BA05 /* TodayRemindersSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Today/TodayRemindersSection.swift"; sourceTree = "<group>"; };
+		676EADA329B245418315ECD3 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Today/TodayView.swift"; sourceTree = "<group>"; };
+		E731CB780C6443D6A4889823 /* TopTasksSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWE/Views/Today/TopTasksSection.swift"; sourceTree = "<group>"; };
+		A3E932D5BD6D48E796CA1240 /* HabitsWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWEWidgets/HabitsWidget.swift"; sourceTree = "<group>"; };
+		966B5CC98A714E4D90E48DF9 /* NextEventWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWEWidgets/NextEventWidget.swift"; sourceTree = "<group>"; };
+		2E23ADABC73D4E97AE92EF20 /* TodayWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWEWidgets/TodayWidget.swift"; sourceTree = "<group>"; };
+		FD1D742EC2104105B66303F4 /* TopTasksWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWEWidgets/TopTasksWidget.swift"; sourceTree = "<group>"; };
+		68DB7547F85246AEA3C8DBB9 /* WidgetModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWEWidgets/WidgetModels.swift"; sourceTree = "<group>"; };
+		0E488795CF264FEFAC078D71 /* WidgetProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWEWidgets/WidgetProvider.swift"; sourceTree = "<group>"; };
+		8E27F1897EB5432E94A463EE /* orgNIZWEWidgetsBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "orgNIZWEWidgets/orgNIZWEWidgetsBundle.swift"; sourceTree = "<group>"; };
+		FBAE592A44604E04A8E70387 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = orgNIZWE/Info.plist; sourceTree = "<group>"; };
+		FDDEC385BD4E4D75A39BF147 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = orgNIZWE/Assets.xcassets; sourceTree = "<group>"; };
+		49793BDA9A2A4D459D66E31D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = orgNIZWEWidgets/Info.plist; sourceTree = "<group>"; };
+		7B6FF0EB6F9144FA8459CD74 /* orgNIZWE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = orgNIZWE.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1543A52F68A443E98C3C283 /* orgNIZWEWidgets.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = orgNIZWEWidgets.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BEC801BF365441FA9AE68CE7 /* Frameworks */ = {
+		13C6B47F3B2C4476B6385D44 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -136,75 +136,75 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		21701C0DFC884C6A95470101 = {
+		922DE43A1A414E40921D5DA2 = {
 			isa = PBXGroup;
 			children = (
-				B265637919ED4C95B8BDBE6A /* Info.plist */,
-				8CAC87F4CBC042E0AC7668C0 /* Assets.xcassets */,
-				008D44FA5FB14CBFAEE4E73D /* ContentView.swift */,
-				78939475F50A416F8D31CAC8 /* orgNIZWEApp.swift */,
-				D29B22F922614412A8EBAD56 /* AddTaskIntent.swift */,
-				423C5B6F04584B6AAF2D6156 /* EventItem.swift */,
-				857DFD0146A94D5F96A27969 /* Habit.swift */,
-				1AAEA43030A74DE1BD43687E /* LifeItem.swift */,
-				9A469F7BE8454D8491A109B0 /* NoteItem.swift */,
-				32C7F786C24C4B8586A4ACF7 /* ReminderItem.swift */,
-				D343AD59686E4F1B80109388 /* ShoppingList.swift */,
-				D0C5570DB8184F608C0AEC5C /* TaskItem.swift */,
-				60F2142D1EDF420D971339D0 /* UserPreferences.swift */,
-				B6EE904299B04B65BAC940A6 /* AIService.swift */,
-				81169F2E76594CF68E141BDD /* EventKitService.swift */,
-				B89FA760D7AA4A8DAD00E7FB /* HapticService.swift */,
-				D8B8E1D945164F5E9AFF386C /* HealthKitService.swift */,
-				6D8680C6DFC442B8A0F3EC30 /* NotificationService.swift */,
-				CD2EFEC51CAF4B38A17A4CAE /* AIAssistantViewModel.swift */,
-				6A2706ADD19F4320AD3864B3 /* CalendarViewModel.swift */,
-				5D1789E510504975ADB2EBD5 /* HabitsViewModel.swift */,
-				4FCA1CA8064947A798F92ADF /* ShoppingViewModel.swift */,
-				9F6B2D572046400B9BBD7120 /* TasksViewModel.swift */,
-				BA519C6C2A3C43168CDA404F /* TodayViewModel.swift */,
-				F01B79D0207849AAB9966797 /* AIAssistantView.swift */,
-				B1337A7FDAEF4DCD9124DC32 /* CalendarView.swift */,
-				4879BB93FA43415E875598BD /* EventEditView.swift */,
-				E218CF27CD724D808151D8A1 /* QuickAddView.swift */,
-				38CCF2BDC7EA46C8A528E031 /* HabitEditView.swift */,
-				AE8D9F072F434A6CBFD16991 /* HabitsView.swift */,
-				F88B859E0386401EBF220D47 /* OnboardingView.swift */,
-				E326992C8E0C4DC6B486322D /* LifeCategoryDetailView.swift */,
-				3317DD469CB544A391087E2A /* LifeItemEditView.swift */,
-				793653251FC84732B4755095 /* OrganizationView.swift */,
-				035CDE11980340D28E7F4D58 /* AISettingsView.swift */,
-				C25214E1F93C4565BB1D3527 /* FavoriteCategoriesView.swift */,
-				8A4487FFBC9B4613AE25B142 /* ModuleOrderView.swift */,
-				FAAA9D877882499390B3FC08 /* ProfileView.swift */,
-				C84E2832B4AB4602BCE2F2C2 /* ShoppingListDetailView.swift */,
-				40968813D7914B45B07608C7 /* ShoppingListEditView.swift */,
-				628D21D9B0B549B9B55F630C /* ShoppingView.swift */,
-				053D8A31BA314FD9AB03DAC8 /* TaskEditView.swift */,
-				392764C34E644E2D97415627 /* TasksView.swift */,
-				863F1E9DBDA346A886CE5373 /* NextEventSection.swift */,
-				26DB0885D3F44452B0B6ED77 /* QuickActionsSection.swift */,
-				D387ACF55A9146F58EC61D83 /* TodayHabitsSection.swift */,
-				79FA22F26477408BA2ABA1DF /* TodayRemindersSection.swift */,
-				61747A2DCC2B4C9892F00DAD /* TodayView.swift */,
-				55FBDC5F34AA4750802F2D5C /* TopTasksSection.swift */,
-				0946BD7744234CA08FEFC9E8 /* HabitsWidget.swift */,
-				C7114EE950A74239A04C6993 /* NextEventWidget.swift */,
-				6A9A7B705A7542C3B48D5087 /* TodayWidget.swift */,
-				7DA2549A12624C5CB9217A3B /* TopTasksWidget.swift */,
-				3CC84C3F0B9A4C68BE6E2A21 /* WidgetModels.swift */,
-				3AAEAF5BEDD548FB94035A40 /* WidgetProvider.swift */,
-				50ECCCA08C7D422F8551848A /* orgNIZWEWidgetsBundle.swift */,
-				DD45CA504EB14AF18AB1F3BE /* Info.plist */,
-				CD0D39C3C4624C99A0CED73A /* Products */,
+				FBAE592A44604E04A8E70387 /* Info.plist */,
+				FDDEC385BD4E4D75A39BF147 /* Assets.xcassets */,
+				19AA111D66A144B3A30409D3 /* ContentView.swift */,
+				0AE38ED59612497AB47853BE /* orgNIZWEApp.swift */,
+				779DE514C94843AC9A8F5332 /* AddTaskIntent.swift */,
+				A02E8E55EA114DF9B94F71A8 /* EventItem.swift */,
+				24B0DFDC58A342D8BF77E469 /* Habit.swift */,
+				3A83CCB8931442ACB897837F /* LifeItem.swift */,
+				4E39D092C79C46DEB08CA7E3 /* NoteItem.swift */,
+				340F85A2D5E747889D49DD15 /* ReminderItem.swift */,
+				1F1061130D7C4D469E2B6CE2 /* ShoppingList.swift */,
+				E883B36885244D11A982F114 /* TaskItem.swift */,
+				9C51FDF26B724BEAA3E4AA0F /* UserPreferences.swift */,
+				0864AA1918544E6A984EEF4B /* AIService.swift */,
+				F260505D16144D04B257FDB2 /* EventKitService.swift */,
+				619F20762E024FEDBF5AFFEF /* HapticService.swift */,
+				849AA2065BA74020AE0DA12F /* HealthKitService.swift */,
+				7F46072F254A4DB1BD9158A1 /* NotificationService.swift */,
+				B8A2B90481BD42C4BA5E54D6 /* AIAssistantViewModel.swift */,
+				3EB187AB13334418A1B4EB61 /* CalendarViewModel.swift */,
+				CB9CF51602D34160A2D59B42 /* HabitsViewModel.swift */,
+				96048E0D0C884CE0B2FBE49B /* ShoppingViewModel.swift */,
+				F1301FE325954C369E887422 /* TasksViewModel.swift */,
+				E36285F64A4C4837B2C46B83 /* TodayViewModel.swift */,
+				90AAD676546547F4B0A39291 /* AIAssistantView.swift */,
+				76738FC7E9A04984A197B772 /* CalendarView.swift */,
+				91A6A7C008094F9CABC0B96D /* EventEditView.swift */,
+				29CB0ED6DE20484FBA79B9BA /* QuickAddView.swift */,
+				0D572C5A726E4787A2A6AB25 /* HabitEditView.swift */,
+				C5A9490A76CC49B08C13CEB1 /* HabitsView.swift */,
+				7EF4F172EA524D53AB1B3D83 /* OnboardingView.swift */,
+				16262D67FCC74B3A82137C1A /* LifeCategoryDetailView.swift */,
+				AED81326F5444584AD5095AA /* LifeItemEditView.swift */,
+				4A89EA4613D9448C8A6580A6 /* OrganizationView.swift */,
+				7B9E853A00374FB7828C92D6 /* AISettingsView.swift */,
+				FE89F86E256C4DAE94E6854E /* FavoriteCategoriesView.swift */,
+				95A259A6694843258D470402 /* ModuleOrderView.swift */,
+				388E7D8085984DA2B723E259 /* ProfileView.swift */,
+				A3FB5C3A06AA473DBB2D27D7 /* ShoppingListDetailView.swift */,
+				8A09C23A4BC14FA7AE5639AF /* ShoppingListEditView.swift */,
+				7E85B2F4660F414EBC57E0E8 /* ShoppingView.swift */,
+				8FEA8BB99CA140A481DD51F2 /* TaskEditView.swift */,
+				9EC18E20315A4246A101F9E1 /* TasksView.swift */,
+				A2753F6F6533444FA24D2464 /* NextEventSection.swift */,
+				A5D062ECAD444AFFACC73C01 /* QuickActionsSection.swift */,
+				153B0C6AC2864EB1A862D532 /* TodayHabitsSection.swift */,
+				657F47BD7B124BF9B074BA05 /* TodayRemindersSection.swift */,
+				676EADA329B245418315ECD3 /* TodayView.swift */,
+				E731CB780C6443D6A4889823 /* TopTasksSection.swift */,
+				A3E932D5BD6D48E796CA1240 /* HabitsWidget.swift */,
+				966B5CC98A714E4D90E48DF9 /* NextEventWidget.swift */,
+				2E23ADABC73D4E97AE92EF20 /* TodayWidget.swift */,
+				FD1D742EC2104105B66303F4 /* TopTasksWidget.swift */,
+				68DB7547F85246AEA3C8DBB9 /* WidgetModels.swift */,
+				0E488795CF264FEFAC078D71 /* WidgetProvider.swift */,
+				8E27F1897EB5432E94A463EE /* orgNIZWEWidgetsBundle.swift */,
+				49793BDA9A2A4D459D66E31D /* Info.plist */,
+				7008929B074540F99BE67C27 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		CD0D39C3C4624C99A0CED73A /* Products */ = {
+		7008929B074540F99BE67C27 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CD0D39C3C4624C99A0CED73A /* orgNIZWE.app */,
-				56459C81C32B4F12B9CC2978 /* orgNIZWEWidgets.appex */,
+				7B6FF0EB6F9144FA8459CD74 /* orgNIZWE.app */,
+				B1543A52F68A443E98C3C283 /* orgNIZWEWidgets.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -212,13 +212,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		41C52890B429481BBF4E0751 /* orgNIZWE */ = {
+		7E78EFAB1F6D43308A5C3853 /* orgNIZWE */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 096A664143C34923946F2F95 /* Build configuration list for PBXNativeTarget "orgNIZWE" */;
+			buildConfigurationList = F1D62560CF1D4511B93F885E /* Build configuration list for PBXNativeTarget "orgNIZWE" */;
 			buildPhases = (
-				5F33794D275B45188069D669 /* Sources */,
-				BEC801BF365441FA9AE68CE7 /* Frameworks */,
-				E1DD11E20CCD4FB7817FB577 /* Resources */,
+				33B716EEC488452A91B63059 /* Sources */,
+				13C6B47F3B2C4476B6385D44 /* Frameworks */,
+				A31D13DB78A64677A07FD211 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -226,15 +226,15 @@
 			);
 			name = orgNIZWE;
 			productName = orgNIZWE;
-			productReference = CD0D39C3C4624C99A0CED73A /* orgNIZWE.app */;
+			productReference = 7B6FF0EB6F9144FA8459CD74 /* orgNIZWE.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E5EE6FEAEB4E49A2B527C83E /* orgNIZWEWidgets */ = {
+		9A0267D2525B48CBAE95A192 /* orgNIZWEWidgets */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 52AE4CC33718438DAFBBDD49 /* Build configuration list for PBXNativeTarget "orgNIZWEWidgets" */;
+			buildConfigurationList = 2F90923F02614C4C91EEA082 /* Build configuration list for PBXNativeTarget "orgNIZWEWidgets" */;
 			buildPhases = (
-				2C9BB9831087476EA87A93A9 /* Sources */,
-				FC57F11A2E36469892ED40DA /* Resources */,
+				5F95D95A90544F038F878201 /* Sources */,
+				8737B34ABDB841BDBFB3E5FB /* Resources */,
 			);
 			buildRules = (
 			);
@@ -242,15 +242,15 @@
 			);
 			name = orgNIZWEWidgets;
 			productName = orgNIZWEWidgets;
-			productReference = 56459C81C32B4F12B9CC2978 /* orgNIZWEWidgets.appex */;
+			productReference = B1543A52F68A443E98C3C283 /* orgNIZWEWidgets.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		8603AB568EBA4C179DCAF15A /* Project object */ = {
+		6980FE034A674BFA9514760E /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = BA3CE58FF183433784091516 /* Build configuration list for PBXProject "orgNIZWE" */;
+			buildConfigurationList = DBA303C0B03149DCB3059E69 /* Build configuration list for PBXProject "orgNIZWE" */;
 			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = pl;
 			hasScannedForEncodings = 0;
@@ -258,27 +258,27 @@
 				pl,
 				Base,
 			);
-			mainGroup = 21701C0DFC884C6A95470101;
-			productRefGroup = CD0D39C3C4624C99A0CED73A /* Products */;
+			mainGroup = 922DE43A1A414E40921D5DA2;
+			productRefGroup = 7008929B074540F99BE67C27 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				41C52890B429481BBF4E0751 /* orgNIZWE */,
-				E5EE6FEAEB4E49A2B527C83E /* orgNIZWEWidgets */,
+				7E78EFAB1F6D43308A5C3853 /* orgNIZWE */,
+				9A0267D2525B48CBAE95A192 /* orgNIZWEWidgets */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		E1DD11E20CCD4FB7817FB577 /* Resources */ = {
+		A31D13DB78A64677A07FD211 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8EF98A882E3439B84C895D4 /* Assets.xcassets in Resources */,
+				602FB7DA910341038E4F4B39 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FC57F11A2E36469892ED40DA /* Resources */ = {
+		8737B34ABDB841BDBFB3E5FB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -288,78 +288,78 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5F33794D275B45188069D669 /* Sources */ = {
+		33B716EEC488452A91B63059 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D71DB4611BB41D6911A4BA5 /* ContentView.swift in Sources */,
-				F16E1982515E43B79CFD61CF /* orgNIZWEApp.swift in Sources */,
-				2E603240CA8746C599534544 /* AddTaskIntent.swift in Sources */,
-				65EC68809A66443ABB36A725 /* EventItem.swift in Sources */,
-				B3E45DCD511E490882CF4BE2 /* Habit.swift in Sources */,
-				8BB4B7AB0FD347709CC1BEC3 /* LifeItem.swift in Sources */,
-				8D99C780129C42D9A8D20064 /* NoteItem.swift in Sources */,
-				7E57599AB76E4014A7F27D74 /* ReminderItem.swift in Sources */,
-				9966AEBAD9684FF5A76161BB /* ShoppingList.swift in Sources */,
-				B1E74DA9643E4DF390B984CE /* TaskItem.swift in Sources */,
-				58FA84519C734A7C8860C559 /* UserPreferences.swift in Sources */,
-				EF8B45C6F7BE404398A6263C /* AIService.swift in Sources */,
-				E645A156D6954FFFA810B574 /* EventKitService.swift in Sources */,
-				29CCDDE8D3A54AEDB4267BD2 /* HapticService.swift in Sources */,
-				1174989351834899A72627DF /* HealthKitService.swift in Sources */,
-				060902CD040048D99C2C2A17 /* NotificationService.swift in Sources */,
-				7D4AB04A978C4B2A86771A95 /* AIAssistantViewModel.swift in Sources */,
-				57F14E3E48694F5F885904A3 /* CalendarViewModel.swift in Sources */,
-				3B047DB26ECB4001BE6EF320 /* HabitsViewModel.swift in Sources */,
-				1FD12F32B9A54B69AEAA936F /* ShoppingViewModel.swift in Sources */,
-				410F785FED054471B3996CAA /* TasksViewModel.swift in Sources */,
-				4B6BC625657C4CDCA7D037F6 /* TodayViewModel.swift in Sources */,
-				12529D09838E4712BB4BBCAB /* AIAssistantView.swift in Sources */,
-				B7D332FF63E645D494FFF8A7 /* CalendarView.swift in Sources */,
-				F4875EC03C3947D89823A348 /* EventEditView.swift in Sources */,
-				91C08123876D435B8CF5EA10 /* QuickAddView.swift in Sources */,
-				6C827B1C69064A9E85A49BC3 /* HabitEditView.swift in Sources */,
-				EB7E7BD567494DB6911F6106 /* HabitsView.swift in Sources */,
-				5FA93181095E48EDA38A997F /* OnboardingView.swift in Sources */,
-				D809EB5B2F514361981CC1AC /* LifeCategoryDetailView.swift in Sources */,
-				46303D01A0FA469A95B992B8 /* LifeItemEditView.swift in Sources */,
-				DA3975637C224BFCBC877F2E /* OrganizationView.swift in Sources */,
-				1A83D189C13B42088FB4F937 /* AISettingsView.swift in Sources */,
-				FE42308114B541558E04A7B9 /* FavoriteCategoriesView.swift in Sources */,
-				8817292EC05A478B9604A00A /* ModuleOrderView.swift in Sources */,
-				7DBD566D4D2C434DBF9ED038 /* ProfileView.swift in Sources */,
-				DD666661769A42FAA234D0FE /* ShoppingListDetailView.swift in Sources */,
-				58BD9A502DC94F0B8B83E357 /* ShoppingListEditView.swift in Sources */,
-				8E83BC8759284E72AA4F24AC /* ShoppingView.swift in Sources */,
-				2396AD7F607644E0A45819FE /* TaskEditView.swift in Sources */,
-				4776A51734CB481FBE69C5D6 /* TasksView.swift in Sources */,
-				9F0CD21A8FF842F7871E04D3 /* NextEventSection.swift in Sources */,
-				E1A23B2A79324172BCB57C98 /* QuickActionsSection.swift in Sources */,
-				EF9D154162824205BEF7E0F8 /* TodayHabitsSection.swift in Sources */,
-				693680E7E2EA40FF81951DF4 /* TodayRemindersSection.swift in Sources */,
-				F8F56BB7AAD24F53B0589149 /* TodayView.swift in Sources */,
-				104FE1D23A554770A3ECB784 /* TopTasksSection.swift in Sources */,
+				56DBBBE55E274C8B98144B53 /* ContentView.swift in Sources */,
+				F6BA34A3B8FE4A84A01BDA36 /* orgNIZWEApp.swift in Sources */,
+				9020FEDCC15A4B6B86B89E20 /* AddTaskIntent.swift in Sources */,
+				3EF1FF6982B74B14B3DB953F /* EventItem.swift in Sources */,
+				F4BC9B66972E4653BD85238C /* Habit.swift in Sources */,
+				197A49990A544643AEF2F58E /* LifeItem.swift in Sources */,
+				080A2D66A8C848E2B18A5E96 /* NoteItem.swift in Sources */,
+				7B5CD1382D644B2DAAD370EB /* ReminderItem.swift in Sources */,
+				E3479FBFFFC7440A82C33533 /* ShoppingList.swift in Sources */,
+				52EB3085033E4BE493AAC43F /* TaskItem.swift in Sources */,
+				130A9938352B4B38901E4EED /* UserPreferences.swift in Sources */,
+				E42360D9AA844C419626CDA5 /* AIService.swift in Sources */,
+				7D471C88D8C64BA0AE908CD1 /* EventKitService.swift in Sources */,
+				1988601B3B56485E8162C065 /* HapticService.swift in Sources */,
+				47AB03442F964A37AD61DF5F /* HealthKitService.swift in Sources */,
+				359154744ED343E298243DC5 /* NotificationService.swift in Sources */,
+				B438101A4C5646AFB15A864F /* AIAssistantViewModel.swift in Sources */,
+				E614B16D3E8C4E8BBAB0BC1F /* CalendarViewModel.swift in Sources */,
+				84038032C156437FA3E7D895 /* HabitsViewModel.swift in Sources */,
+				C686429080CE475BBE4327B9 /* ShoppingViewModel.swift in Sources */,
+				A03ABF79128542E395CD89B3 /* TasksViewModel.swift in Sources */,
+				192837825DEB4493B1DB843C /* TodayViewModel.swift in Sources */,
+				AFD19B8C22D64B82AB5F3C79 /* AIAssistantView.swift in Sources */,
+				CF1B150876684B19B188B223 /* CalendarView.swift in Sources */,
+				F38EBCAE184D49FFB29400A6 /* EventEditView.swift in Sources */,
+				E28373A602EA4941A225964D /* QuickAddView.swift in Sources */,
+				592911D5254246FCBB378191 /* HabitEditView.swift in Sources */,
+				CFAD042BA87F483989DB34A1 /* HabitsView.swift in Sources */,
+				A29C331C9A904851AB3C891E /* OnboardingView.swift in Sources */,
+				96C4102AF9B0474B8EFFA867 /* LifeCategoryDetailView.swift in Sources */,
+				1F6F9B27BC4B4698AB0C1602 /* LifeItemEditView.swift in Sources */,
+				F068F55A37534C9F91906628 /* OrganizationView.swift in Sources */,
+				DBED9D0E841D4DC3AC9BEA15 /* AISettingsView.swift in Sources */,
+				62538ED539B945F39299BF1D /* FavoriteCategoriesView.swift in Sources */,
+				6AA3DB78EDA14405ADA321B3 /* ModuleOrderView.swift in Sources */,
+				3F0CF09BF74044E7BC515208 /* ProfileView.swift in Sources */,
+				29E4CA80A39D48069BD22F95 /* ShoppingListDetailView.swift in Sources */,
+				A39CB489E9DF4631A46C2749 /* ShoppingListEditView.swift in Sources */,
+				2602D92A1E4D4ED3AC1EB106 /* ShoppingView.swift in Sources */,
+				21129A8A81A34717B9CB0308 /* TaskEditView.swift in Sources */,
+				D47FFA85B444430CBDEE1C55 /* TasksView.swift in Sources */,
+				AC87AC76B4B44941BA8CB930 /* NextEventSection.swift in Sources */,
+				BA02B405075147A3A061F7B0 /* QuickActionsSection.swift in Sources */,
+				3178C10947F34157A9D50A92 /* TodayHabitsSection.swift in Sources */,
+				B48AFD8EFAD44F0EA50A9E5F /* TodayRemindersSection.swift in Sources */,
+				D63F7C68FB944EEFA58F5140 /* TodayView.swift in Sources */,
+				5153F70AB367465381CF2EB7 /* TopTasksSection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2C9BB9831087476EA87A93A9 /* Sources */ = {
+		5F95D95A90544F038F878201 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CFEC2FA1AA3461AA4A9523D /* HabitsWidget.swift in Sources */,
-				48B2C482BDCF4D4287E544B5 /* NextEventWidget.swift in Sources */,
-				00F6A150C9A746C580BAC1D5 /* TodayWidget.swift in Sources */,
-				6FC0D880EFE1478FB269581A /* TopTasksWidget.swift in Sources */,
-				9F6C1FD6527B41AD826C9DC3 /* WidgetModels.swift in Sources */,
-				74B02AAA44EF437CB0FF938D /* WidgetProvider.swift in Sources */,
-				9AF3D447A26343E8AA7C70F0 /* orgNIZWEWidgetsBundle.swift in Sources */,
+				E62DB11DECC945CF8F3BEAF3 /* HabitsWidget.swift in Sources */,
+				00B6CC55CCE845D3B55013DB /* NextEventWidget.swift in Sources */,
+				08C9AF389B4B4BFDB398681C /* TodayWidget.swift in Sources */,
+				F7D97C9515324E7BAC1522A7 /* TopTasksWidget.swift in Sources */,
+				FC20736B46244BF8A60DC503 /* WidgetModels.swift in Sources */,
+				FB0E4CA0EE52448E87B4ABC4 /* WidgetProvider.swift in Sources */,
+				0E9E900FE4FA4A2CAED4EE62 /* orgNIZWEWidgetsBundle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		1DB8F33C8BB543358AA29611 /* Debug */ = {
+		61B1D421F5EC4BE1A60916AD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -420,7 +420,7 @@
 			};
 			name = Debug;
 		};
-		A8E5DF3A9DCD47DF810CE956 /* Release */ = {
+		4C5150BEE1114E2FAB510AA7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -474,7 +474,7 @@
 			};
 			name = Release;
 		};
-		14B44EDB872242ED8C99FEBB /* Debug */ = {
+		EF35F18E080C4CAF8917DE96 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -504,7 +504,7 @@
 			};
 			name = Debug;
 		};
-		04977F19811641A796A23594 /* Release */ = {
+		D524D65B295241CDB3888C47 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -534,7 +534,7 @@
 			};
 			name = Release;
 		};
-		8CC8D07287C64B9DB255C97B /* Debug */ = {
+		8B1C255C7F09426AB4BE2BC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -559,7 +559,7 @@
 			};
 			name = Debug;
 		};
-		867C0D8CED46442AB4F1DD22 /* Release */ = {
+		59E9064A063C4AC78F258FFD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -587,34 +587,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BA3CE58FF183433784091516 /* Build configuration list for PBXProject "orgNIZWE" */ = {
+		DBA303C0B03149DCB3059E69 /* Build configuration list for PBXProject "orgNIZWE" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1DB8F33C8BB543358AA29611 /* Debug */,
-				A8E5DF3A9DCD47DF810CE956 /* Release */,
+				61B1D421F5EC4BE1A60916AD /* Debug */,
+				4C5150BEE1114E2FAB510AA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		096A664143C34923946F2F95 /* Build configuration list for PBXNativeTarget "orgNIZWE" */ = {
+		F1D62560CF1D4511B93F885E /* Build configuration list for PBXNativeTarget "orgNIZWE" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				14B44EDB872242ED8C99FEBB /* Debug */,
-				04977F19811641A796A23594 /* Release */,
+				EF35F18E080C4CAF8917DE96 /* Debug */,
+				D524D65B295241CDB3888C47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		52AE4CC33718438DAFBBDD49 /* Build configuration list for PBXNativeTarget "orgNIZWEWidgets" */ = {
+		2F90923F02614C4C91EEA082 /* Build configuration list for PBXNativeTarget "orgNIZWEWidgets" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8CC8D07287C64B9DB255C97B /* Debug */,
-				867C0D8CED46442AB4F1DD22 /* Release */,
+				8B1C255C7F09426AB4BE2BC5 /* Debug */,
+				59E9064A063C4AC78F258FFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 8603AB568EBA4C179DCAF15A /* Project object */;
+	rootObject = 6980FE034A674BFA9514760E /* Project object */;
 }

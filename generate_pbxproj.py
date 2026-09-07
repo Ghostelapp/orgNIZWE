@@ -28,6 +28,7 @@ def pbxproj_content():
     app_resources_build_phase_uuid = new_uuid()
     app_frameworks_build_phase_uuid = new_uuid()
     product_ref_uuid = new_uuid()
+    products_group_uuid = new_uuid()
     info_plist_file_ref = new_uuid()
     assets_file_ref = new_uuid()
     
@@ -122,12 +123,12 @@ def pbxproj_content():
 {chr(10).join([f"\t\t\t\t{file_ref} /* {os.path.basename(rel_path)} */," for rel_path, file_ref, _ in app_source_build_files])}
 {chr(10).join([f"\t\t\t\t{file_ref} /* {os.path.basename(rel_path)} */," for rel_path, file_ref, _ in widget_source_build_files])}
 \t\t\t\t{widget_extension_plist_ref} /* Info.plist */,
-\t\t\t\t{product_ref_uuid} /* Products */,
+\t\t\t\t{products_group_uuid} /* Products */,
 \t\t\t);
 \t\t\tsourceTree = \"<group>\";
 \t\t}};""")
     
-    groups_content.append(f"""\t\t{product_ref_uuid} /* Products */ = {{
+    groups_content.append(f"""\t\t{products_group_uuid} /* Products */ = {{
 \t\t\tisa = PBXGroup;
 \t\t\tchildren = (
 \t\t\t\t{product_ref_uuid} /* orgNIZWE.app */,
@@ -184,7 +185,7 @@ def pbxproj_content():
 \t\t\t\tBase,
 \t\t\t);
 \t\t\tmainGroup = {main_group_uuid};
-\t\t\tproductRefGroup = {product_ref_uuid} /* Products */;
+\t\t\tproductRefGroup = {products_group_uuid} /* Products */;
 \t\t\tprojectDirPath = \"\";
 \t\t\tprojectRoot = \"\";
 \t\t\ttargets = (

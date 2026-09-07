@@ -26,7 +26,7 @@ struct TodayWidgetView: View {
         VStack(alignment: .leading, spacing: 8) {
             HStack {
                 Image(systemName: "sun.max.fill")
-                    .foregroundStyle(.accent)
+                    .foregroundStyle(Color.accentColor)
                 Text("Dzisiaj")
                     .font(.headline)
             }

@@ -26,7 +26,7 @@ struct NextEventWidgetView: View {
         VStack(alignment: .leading, spacing: 8) {
             HStack {
                 Image(systemName: "calendar.badge.clock")
-                    .foregroundStyle(.accent)
+                    .foregroundStyle(Color.accentColor)
                 Text("Wydarzenie")
                     .font(.headline)
             }

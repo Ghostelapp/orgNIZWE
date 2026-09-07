@@ -26,7 +26,7 @@ struct TopTasksWidgetView: View {
         VStack(alignment: .leading, spacing: 8) {
             HStack {
                 Image(systemName: "star.fill")
-                    .foregroundStyle(.accent)
+                    .foregroundStyle(Color.accentColor)
                 Text("Zadania")
                     .font(.headline)
             }

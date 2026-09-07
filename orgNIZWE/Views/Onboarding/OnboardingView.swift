@@ -30,7 +30,7 @@ struct OnboardingView: View {
                 
                 Image(systemName: steps[step].icon)
                     .font(.system(size: 80))
-                    .foregroundStyle(.accentColor)
+                    .foregroundStyle(Color.accentColor)
                     .padding()
                     .background(
                         Circle()

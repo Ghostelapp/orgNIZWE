@@ -145,7 +145,7 @@ struct ProposedActionsBar: View {
                     ForEach(actions) { action in
                         HStack(spacing: 6) {
                             Image(systemName: iconFor(action.type))
-                                .foregroundStyle(.accentColor)
+                                .foregroundStyle(Color.accentColor)
                             Text(action.title)
                                 .font(.caption)
                                 .lineLimit(1)

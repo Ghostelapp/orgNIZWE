@@ -96,8 +96,8 @@ def pbxproj_content():
     for rel_path, file_ref, _ in widget_source_build_files:
         file_refs.append(f"\t\t{file_ref} /* {os.path.basename(rel_path)} */ = {{isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = \"{rel_path}\"; sourceTree = \"<group>\"; }};")
     
-    file_refs.append(f"\t\t{info_plist_file_ref} /* Info.plist */ = {{isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = \"<group>\"; }};")
-    file_refs.append(f"\t\t{assets_file_ref} /* Assets.xcassets */ = {{isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = \"<group>\"; }};")
+    file_refs.append(f"\t\t{info_plist_file_ref} /* Info.plist */ = {{isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = orgNIZWE/Info.plist; sourceTree = \"<group>\"; }};")
+    file_refs.append(f"\t\t{assets_file_ref} /* Assets.xcassets */ = {{isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = orgNIZWE/Assets.xcassets; sourceTree = \"<group>\"; }};")
     file_refs.append(f"\t\t{widget_extension_plist_ref} /* Info.plist */ = {{isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = orgNIZWEWidgets/Info.plist; sourceTree = \"<group>\"; }};")
     file_refs.append(f"\t\t{product_ref_uuid} /* orgNIZWE.app */ = {{isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = orgNIZWE.app; sourceTree = BUILT_PRODUCTS_DIR; }};")
     file_refs.append(f"\t\t{widget_product_ref_uuid} /* orgNIZWEWidgets.appex */ = {{isa = PBXFileReference; explicitFileType = \"wrapper.app-extension\"; includeInIndex = 0; path = orgNIZWEWidgets.appex; sourceTree = BUILT_PRODUCTS_DIR; }};")

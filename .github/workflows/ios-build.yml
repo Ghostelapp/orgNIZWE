@@ -19,6 +19,9 @@ jobs:
       - name: Show default Xcode version
         run: xcodebuild -version
 
+      - name: Validate project.pbxproj
+        run: plutil -lint orgNIZWE.xcodeproj/project.pbxproj
+
       - name: List project targets and schemes
         run: xcodebuild -project orgNIZWE.xcodeproj -list
 

@@ -16,6 +16,9 @@ def new_uuid():
 def pbxproj_content():
     # Główne identyfikatory
     project_uuid = new_uuid()
+    project_build_config_list_uuid = new_uuid()
+    project_build_config_debug_uuid = new_uuid()
+    project_build_config_release_uuid = new_uuid()
     main_group_uuid = new_uuid()
     app_target_uuid = new_uuid()
     app_build_config_list_uuid = new_uuid()
@@ -172,7 +175,7 @@ def pbxproj_content():
     # Sekcja PBXProject
     project_section = f"""\t\t{project_uuid} /* Project object */ = {{
 \t\t\tisa = PBXProject;
-\t\t\tbuildConfigurationList = {new_uuid()} /* Build configuration list for PBXProject \"orgNIZWE\" */;
+\t\t\tbuildConfigurationList = {project_build_config_list_uuid} /* Build configuration list for PBXProject \"orgNIZWE\" */;
 \t\t\tcompatibilityVersion = \"Xcode 15.0\";
 \t\t\tdevelopmentRegion = pl;
 \t\t\thasScannedForEncodings = 0;
@@ -229,7 +232,122 @@ def pbxproj_content():
 \t\t}};"""
     
     # Sekcja XCBuildConfiguration
-    build_configs = f"""\t\t{app_build_config_debug_uuid} /* Debug */ = {{
+    build_configs = f"""\t\t{project_build_config_debug_uuid} /* Debug */ = {{
+\t\t\tisa = XCBuildConfiguration;
+\t\t\tbuildSettings = {{
+\t\t\t\tALWAYS_SEARCH_USER_PATHS = NO;
+\t\t\t\tASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+\t\t\t\tCLANG_ANALYZER_NONNULL = YES;
+\t\t\t\tCLANG_CXX_LANGUAGE_STANDARD = \"gnu++20\";
+\t\t\t\tCLANG_ENABLE_MODULES = YES;
+\t\t\t\tCLANG_ENABLE_OBJC_ARC = YES;
+\t\t\t\tCLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+\t\t\t\tCLANG_WARN_BOOL_CONVERSION = YES;
+\t\t\t\tCLANG_WARN_COMMA = YES;
+\t\t\t\tCLANG_WARN_CONSTANT_CONVERSION = YES;
+\t\t\t\tCLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+\t\t\t\tCLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+\t\t\t\tCLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+\t\t\t\tCLANG_WARN_EMPTY_BODY = YES;
+\t\t\t\tCLANG_WARN_ENUM_CONVERSION = YES;
+\t\t\t\tCLANG_WARN_INFINITE_RECURSION = YES;
+\t\t\t\tCLANG_WARN_INT_CONVERSION = YES;
+\t\t\t\tCLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+\t\t\t\tCLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+\t\t\t\tCLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+\t\t\t\tCLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+\t\t\t\tCLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+\t\t\t\tCLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+\t\t\t\tCLANG_WARN_STRICT_PROTOTYPES = YES;
+\t\t\t\tCLANG_WARN_SUSPICIOUS_MOVE = YES;
+\t\t\t\tCLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+\t\t\t\tCLANG_WARN_UNREACHABLE_CODE = YES;
+\t\t\t\tCLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+\t\t\t\tCOPY_PHASE_STRIP = NO;
+\t\t\t\tDEBUG_INFORMATION_FORMAT = dwarf;
+\t\t\t\tENABLE_STRICT_OBJC_MSGSEND = YES;
+\t\t\t\tENABLE_TESTABILITY = YES;
+\t\t\t\tENABLE_USER_SCRIPT_SANDBOXING = YES;
+\t\t\t\tGCC_C_LANGUAGE_STANDARD = gnu17;
+\t\t\t\tGCC_DYNAMIC_NO_PIC = NO;
+\t\t\t\tGCC_NO_COMMON_BLOCKS = YES;
+\t\t\t\tGCC_OPTIMIZATION_LEVEL = 0;
+\t\t\t\tGCC_PREPROCESSOR_DEFINITIONS = (
+\t\t\t\t\t\"DEBUG=1\",
+\t\t\t\t\t\"$(inherited)\",
+\t\t\t\t);
+\t\t\t\tGCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+\t\t\t\tGCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+\t\t\t\tGCC_WARN_UNDECLARED_SELECTOR = YES;
+\t\t\t\tGCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+\t\t\t\tGCC_WARN_UNUSED_FUNCTION = YES;
+\t\t\t\tGCC_WARN_UNUSED_VARIABLE = YES;
+\t\t\t\tIPHONEOS_DEPLOYMENT_TARGET = 17.0;
+\t\t\t\tLOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+\t\t\t\tMTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+\t\t\t\tMTL_FAST_MATH = YES;
+\t\t\t\tONLY_ACTIVE_ARCH = YES;
+\t\t\t\tSDKROOT = iphoneos;
+\t\t\t\tSWIFT_ACTIVE_COMPILATION_CONDITIONS = \"DEBUG $(inherited)\";
+\t\t\t\tSWIFT_OPTIMIZATION_LEVEL = \"-Onone\";
+\t\t\t}};
+\t\t\tname = Debug;
+\t\t}};
+\t\t{project_build_config_release_uuid} /* Release */ = {{
+\t\t\tisa = XCBuildConfiguration;
+\t\t\tbuildSettings = {{
+\t\t\t\tALWAYS_SEARCH_USER_PATHS = NO;
+\t\t\t\tASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+\t\t\t\tCLANG_ANALYZER_NONNULL = YES;
+\t\t\t\tCLANG_CXX_LANGUAGE_STANDARD = \"gnu++20\";
+\t\t\t\tCLANG_ENABLE_MODULES = YES;
+\t\t\t\tCLANG_ENABLE_OBJC_ARC = YES;
+\t\t\t\tCLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+\t\t\t\tCLANG_WARN_BOOL_CONVERSION = YES;
+\t\t\t\tCLANG_WARN_COMMA = YES;
+\t\t\t\tCLANG_WARN_CONSTANT_CONVERSION = YES;
+\t\t\t\tCLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+\t\t\t\tCLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+\t\t\t\tCLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+\t\t\t\tCLANG_WARN_EMPTY_BODY = YES;
+\t\t\t\tCLANG_WARN_ENUM_CONVERSION = YES;
+\t\t\t\tCLANG_WARN_INFINITE_RECURSION = YES;
+\t\t\t\tCLANG_WARN_INT_CONVERSION = YES;
+\t\t\t\tCLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+\t\t\t\tCLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+\t\t\t\tCLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+\t\t\t\tCLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+\t\t\t\tCLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+\t\t\t\tCLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+\t\t\t\tCLANG_WARN_STRICT_PROTOTYPES = YES;
+\t\t\t\tCLANG_WARN_SUSPICIOUS_MOVE = YES;
+\t\t\t\tCLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+\t\t\t\tCLANG_WARN_UNREACHABLE_CODE = YES;
+\t\t\t\tCLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+\t\t\t\tCOPY_PHASE_STRIP = NO;
+\t\t\t\tDEBUG_INFORMATION_FORMAT = \"dwarf-with-dsym\";
+\t\t\t\tENABLE_NS_ASSERTIONS = NO;
+\t\t\t\tENABLE_STRICT_OBJC_MSGSEND = YES;
+\t\t\t\tENABLE_USER_SCRIPT_SANDBOXING = YES;
+\t\t\t\tGCC_C_LANGUAGE_STANDARD = gnu17;
+\t\t\t\tGCC_NO_COMMON_BLOCKS = YES;
+\t\t\t\tGCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+\t\t\t\tGCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+\t\t\t\tGCC_WARN_UNDECLARED_SELECTOR = YES;
+\t\t\t\tGCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+\t\t\t\tGCC_WARN_UNUSED_FUNCTION = YES;
+\t\t\t\tGCC_WARN_UNUSED_VARIABLE = YES;
+\t\t\t\tIPHONEOS_DEPLOYMENT_TARGET = 17.0;
+\t\t\t\tLOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+\t\t\t\tMTL_ENABLE_DEBUG_INFO = NO;
+\t\t\t\tMTL_FAST_MATH = YES;
+\t\t\t\tSDKROOT = iphoneos;
+\t\t\t\tSWIFT_COMPILATION_MODE = wholemodule;
+\t\t\t\tVALIDATE_PRODUCT = YES;
+\t\t\t}};
+\t\t\tname = Release;
+\t\t}};
+\t\t{app_build_config_debug_uuid} /* Debug */ = {{
 \t\t\tisa = XCBuildConfiguration;
 \t\t\tbuildSettings = {{
 \t\t\t\tASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -341,7 +459,16 @@ def pbxproj_content():
 \t\t}};"""
     
     # Sekcja XCConfigurationList
-    config_lists = f"""\t\t{app_build_config_list_uuid} /* Build configuration list for PBXNativeTarget \"orgNIZWE\" */ = {{
+    config_lists = f"""\t\t{project_build_config_list_uuid} /* Build configuration list for PBXProject \"orgNIZWE\" */ = {{
+\t\t\tisa = XCConfigurationList;
+\t\t\tbuildConfigurations = (
+\t\t\t\t{project_build_config_debug_uuid} /* Debug */,
+\t\t\t\t{project_build_config_release_uuid} /* Release */,
+\t\t\t);
+\t\t\tdefaultConfigurationIsVisible = 0;
+\t\t\tdefaultConfigurationName = Release;
+\t\t}};
+\t\t{app_build_config_list_uuid} /* Build configuration list for PBXNativeTarget \"orgNIZWE\" */ = {{
 \t\t\tisa = XCConfigurationList;
 \t\t\tbuildConfigurations = (
 \t\t\t\t{app_build_config_debug_uuid} /* Debug */,

@@ -7,10 +7,14 @@ on:
         description: "Wersja aplikacji (np. 1.0.0)"
         required: true
         default: "1.0.0"
+      build_number:
+        description: "Numer buildu (np. 1)"
+        required: true
+        default: "1"
 
 jobs:
   archive:
-    name: Archive and Export IPA
+    name: Archive, Export and Upload to App Store Connect
     runs-on: macos-latest
 
     steps:
@@ -34,9 +38,10 @@ jobs:
           api-key-id: ${{ secrets.APPLE_API_KEY_ID }}
           api-private-key: ${{ secrets.APPLE_API_PRIVATE_KEY }}
 
-      - name: Update version
+      - name: Update version and build number
         run: |
           sed -i '' 's/MARKETING_VERSION = 1.0/MARKETING_VERSION = ${{ github.event.inputs.version }}/g' orgNIZWE.xcodeproj/project.pbxproj
+          sed -i '' 's/CURRENT_PROJECT_VERSION = 1/CURRENT_PROJECT_VERSION = ${{ github.event.inputs.build_number }}/g' orgNIZWE.xcodeproj/project.pbxproj
 
       - name: Archive app
         run: |
@@ -55,7 +60,23 @@ jobs:
             -exportPath build \
             -exportOptionsPlist ExportOptions.plist
 
-      - name: Upload IPA
+      - name: Save App Store Connect API key
+        run: |
+          mkdir -p ${{ runner.temp }}/appstoreconnect
+          echo "${{ secrets.APPLE_API_PRIVATE_KEY }}" > ${{ runner.temp }}/appstoreconnect/AuthKey_${{ secrets.APPLE_API_KEY_ID }}.p8
+
+      - name: Upload IPA to App Store Connect
+        run: |
+          xcrun altool --upload-app \
+            --type ios \
+            --file build/orgNIZWE.ipa \
+            --apiKey ${{ secrets.APPLE_API_KEY_ID }} \
+            --apiIssuer ${{ secrets.APPLE_ISSUER_ID }} \
+            --verbose
+        env:
+          ALTOOL_API_KEY_PATH: ${{ runner.temp }}/appstoreconnect/AuthKey_${{ secrets.APPLE_API_KEY_ID }}.p8
+
+      - name: Upload IPA artifact
         uses: actions/upload-artifact@v4
         with:
           name: orgNIZWE-${{ github.event.inputs.version }}.ipa

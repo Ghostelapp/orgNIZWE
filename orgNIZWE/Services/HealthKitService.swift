@@ -14,13 +14,13 @@ final class HealthKitService: ObservableObject {
     func requestAuthorization() async -> Bool {
         guard isAvailable else { return false }
         
-        let typesToRead: Set<HKObjectType> = [
-            HKObjectType.quantityType(forIdentifier: .stepCount)!,
-            HKObjectType.quantityType(forIdentifier: .activeEnergyBurned)!,
-            HKObjectType.categoryType(forIdentifier: .sleepAnalysis)!,
-            HKObjectType.quantityType(forIdentifier: .bodyMass)!,
-            HKObjectType.quantityType(forIdentifier: .heartRate)!
-        ].compactMap { $0 as HKObjectType? }
+        let typesToRead: Set<HKObjectType> = Set([
+            HKObjectType.quantityType(forIdentifier: .stepCount),
+            HKObjectType.quantityType(forIdentifier: .activeEnergyBurned),
+            HKObjectType.categoryType(forIdentifier: .sleepAnalysis),
+            HKObjectType.quantityType(forIdentifier: .bodyMass),
+            HKObjectType.quantityType(forIdentifier: .heartRate)
+        ].compactMap { $0 })
         
         do {
             try await healthStore.requestAuthorization(toShare: [], read: typesToRead)

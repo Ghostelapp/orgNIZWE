@@ -12,9 +12,7 @@ struct AddTaskIntent: AppIntent {
     var dueDate: Date?
     
     static var parameterSummary: some ParameterSummary {
-        Summary("Dodaj zadanie \($title)") {
-            \.$dueDate
-        }
+        Summary("Dodaj zadanie \(\.$title)")
     }
     
     func perform() async throws -> some IntentResult {

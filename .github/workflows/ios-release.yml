@@ -21,6 +21,30 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Validate required secrets
+        run: |
+          echo "Sprawdzam wymagane sekrety..."
+          missing=()
+          [ -z "${{ secrets.APPLE_P12_BASE64 }}" ] && missing+=("APPLE_P12_BASE64")
+          [ -z "${{ secrets.APPLE_P12_PASSWORD }}" ] && missing+=("APPLE_P12_PASSWORD")
+          [ -z "${{ secrets.APPLE_ISSUER_ID }}" ] && missing+=("APPLE_ISSUER_ID")
+          [ -z "${{ secrets.APPLE_API_KEY_ID }}" ] && missing+=("APPLE_API_KEY_ID")
+          [ -z "${{ secrets.APPLE_API_PRIVATE_KEY }}" ] && missing+=("APPLE_API_PRIVATE_KEY")
+
+          if [ ${#missing[@]} -ne 0 ]; then
+            echo ""
+            echo "❌ BŁĄD: Brakuje następujących sekretów w repozytorium GitHub:"
+            for secret in "${missing[@]}"; do
+              echo "   - $secret"
+            done
+            echo ""
+            echo "Dodaj je w: Settings → Secrets and variables → Actions → New repository secret"
+            echo "Instrukcja znajduje się w README.md w sekcji 'TestFlight — krok po kroku'."
+            exit 1
+          fi
+
+          echo "✅ Wszystkie wymagane sekrety są ustawione."
+
       - name: Show default Xcode version
         run: xcodebuild -version
 

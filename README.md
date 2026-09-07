@@ -109,25 +109,85 @@ Workflow:
 
 Aby workflow zadziałał, wystarczy wypchnąć kod do repozytorium GitHub. GitHub Actions automatycznie wykryje plik w `.github/workflows/`.
 
-### Ręczny build i upload do App Store Connect / TestFlight
+### TestFlight — krok po kroku
 
 Plik: `.github/workflows/ios-release.yml`
 
-Workflow automatycznie:
-1. Archiwizuje aplikację.
-2. Eksportuje plik `.ipa`.
-3. **Uploaduje build do App Store Connect** (pojawi się w TestFlight).
+Workflow automatycznie archiwizuje aplikację, eksportuje `.ipa` i wysyła build do App Store Connect, gdzie pojawi się w **TestFlight**.
 
-Wymaga skonfigurowania sekretów w repozytorium GitHub:
-- `APPLE_P12_BASE64` — certyfikat dystrybucyjny Apple zakodowany base64
-- `APPLE_P12_PASSWORD` — hasło do certyfikatu
-- `APPLE_ISSUER_ID` — Issuer ID z App Store Connect
-- `APPLE_API_KEY_ID` — Key ID z App Store Connect
-- `APPLE_API_PRIVATE_KEY` — klucz prywatny API z App Store Connect (cała zawartość pliku `.p8`)
+#### 1. Zmień Bundle Identifier i Team ID
 
-Przed uruchomieniem uzupełnij `ExportOptions.plist` swoim `Team ID`.
+W pliku `orgNIZWE.xcodeproj/project.pbxproj` zamień:
+- `com.yourcompany.orgNIZWE` na własny Bundle ID, np. `pl.twojadomena.orgNIZWE`
+- w `ExportOptions.plist` zamień `YOUR_TEAM_ID` na swój Team ID z Apple Developer
 
-Workflow uruchamiasz ręcznie z zakładki **Actions → iOS Release Build → Run workflow**, podając numer wersji i numer buildu.
+> **Jak znaleźć Team ID?** Wejdź na https://developer.apple.com/account → Membership → Team ID.
+
+#### 2. Utwórz App ID i rejestrację aplikacji w App Store Connect
+
+1. Wejdź na https://developer.apple.com/account/resources/identifiers/list
+2. Utwórz nowy **App ID** z Bundle ID takim samym jak w projekcie.
+3. Wejdź na https://appstoreconnect.apple.com/apps → **+** → wybierz platformę iOS, wpisz nazwę `orgNIZWE`, wybierz język i Bundle ID.
+
+#### 3. Wygeneruj certyfikat dystrybucyjny .p12
+
+1. Na Macu otwórz **Keychain Access**.
+2. Wygeneruj **Certificate Signing Request (CSR)**: Keychain Access → Certificate Assistant → Request a Certificate From a Certificate Authority.
+3. Wejdź na https://developer.apple.com/account/resources/certificates/list
+4. Dodaj certyfikat **Apple Distribution** lub **iOS Distribution**.
+5. Pobierz plik `.cer` i kliknij dwukrotnie, aby dodać do Keychain.
+6. W Keychain znajdź certyfikat → rozwiń → zaznacz certyfikat **i klucz prywatny** → prawy przycisk → Export 2 items.
+7. Zapisz jako `Certificates.p12`, ustaw hasło i zapamiętaj je.
+
+#### 4. Zakoduj .p12 w base64
+
+W terminalu na Macu:
+```bash
+base64 -i Certificates.p12 -o p12-base64.txt
+```
+
+Lub użyj dołączonego skryptu:
+```bash
+./scripts/prepare_p12.sh Certificates.p12
+```
+
+Skopiuj całą zawartość wygenerowanego pliku `.base64.txt`.
+
+#### 5. Wygeneruj klucz API do App Store Connect
+
+1. Wejdź na https://appstoreconnect.apple.com/access/api
+2. Kliknij **+** przy **App Store Connect API**.
+3. Wpisz nazwę, wybierz rolę **App Manager** lub **Admin**.
+4. Pobierz plik `.p8` — **zapisz go, bo nie będzie można pobrać ponownie**.
+5. Zanotuj **Issuer ID** i **Key ID**.
+
+#### 6. Dodaj sekrety w GitHub
+
+Wejdź w repozytorium: https://github.com/Ghostelapp/orgNIZWE
+
+Następnie **Settings → Secrets and variables → Actions → New repository secret** i dodaj:
+
+| Nazwa sekretu | Wartość |
+|---|---|
+| `APPLE_P12_BASE64` | Cała zawartość pliku `.base64.txt` z certyfikatem |
+| `APPLE_P12_PASSWORD` | Hasło, które ustawiłeś przy eksporcie `.p12` |
+| `APPLE_ISSUER_ID` | Issuer ID z App Store Connect |
+| `APPLE_API_KEY_ID` | Key ID z App Store Connect |
+| `APPLE_API_PRIVATE_KEY` | Cała zawartość pobranego pliku `.p8` |
+
+#### 7. Uruchom workflow
+
+1. Wejdź w **Actions → iOS Release Build → Run workflow**.
+2. Podaj numer wersji (np. `1.0.0`) i numer buildu (np. `1`).
+3. Kliknij **Run workflow**.
+
+Build powinien pojawić się w App Store Connect w ciągu kilku minut: **Apps → orgNIZWE → TestFlight**.
+
+#### 8. Dodaj testerów
+
+W App Store Connect:
+- **TestFlight → Internal Testing** — dodaj członków zespołu.
+- **TestFlight → External Testing** — dodaj zewnętrznych testerów lub utwórz publiczny link.
 
 ## Uwagi
 

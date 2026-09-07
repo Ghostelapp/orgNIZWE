@@ -1,5 +1,6 @@
 import WidgetKit
 import SwiftUI
+import AppIntents
 
 struct WidgetProvider: AppIntentTimelineProvider {
     func placeholder(in context: Context) -> orgNIZWEWidgetEntry {

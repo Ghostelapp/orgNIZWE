@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>pl</string>
+    <key>CFBundleDisplayName</key>
+    <string>orgNIZWE</string>
+    <key>CFBundleExecutable</key>
+    <string>orgNIZWE</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.yourcompany.orgNIZWE</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleName</key>
+    <string>orgNIZWE</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+    <key>UIApplicationSceneManifest</key>
+    <dict>
+        <key>UIApplicationSupportsMultipleScenes</key>
+        <true/>
+    </dict>
+    <key>UILaunchScreen</key>
+    <dict/>
+    <key>UIRequiredDeviceCapabilities</key>
+    <array>
+        <string>armv7</string>
+    </array>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+    </array>
+    <key>NSCalendarsUsageDescription</key>
+    <string>orgNIZWE potrzebuje dostępu do kalendarza, aby synchronizować wydarzenia.</string>
+    <key>NSRemindersUsageDescription</key>
+    <string>orgNIZWE potrzebuje dostępu do przypomnień, aby tworzyć przypomnienia systemowe.</string>
+    <key>NSHealthShareUsageDescription</key>
+    <string>orgNIZWE odczytuje dane o aktywności i snie, aby lepiej organizować Twoje nawyki.</string>
+    <key>NSUserNotificationUsageDescription</key>
+    <string>orgNIZWE wysyła przypomnienia o zadaniach, wydarzeniach i nawykach.</string>
+</dict>
+</plist>

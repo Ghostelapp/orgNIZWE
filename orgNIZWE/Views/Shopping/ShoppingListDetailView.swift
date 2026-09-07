@@ -41,7 +41,7 @@ struct ShoppingListDetailView: View {
                                     .padding(.horizontal, 12)
                                     .padding(.vertical, 6)
                                     .background(Color.accentColor.opacity(0.12))
-                                    .foregroundStyle(.accent)
+                                    .foregroundStyle(.accentColor)
                                     .clipShape(Capsule())
                             }
                             .buttonStyle(.plain)

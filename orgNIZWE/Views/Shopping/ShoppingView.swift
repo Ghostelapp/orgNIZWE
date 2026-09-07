@@ -58,7 +58,7 @@ struct ShoppingListRow: View {
                     .frame(width: 50, height: 50)
                 Image(systemName: "cart")
                     .font(.title3)
-                    .foregroundStyle(.accent)
+                    .foregroundStyle(.accentColor)
             }
             
             VStack(alignment: .leading, spacing: 4) {

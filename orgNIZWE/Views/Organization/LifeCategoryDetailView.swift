@@ -12,7 +12,12 @@ struct LifeCategoryDetailView: View {
     
     var items: [LifeItem] {
         allItems.filter { $0.category == category }
-            .sorted { ($0.isPinned, $0.createdAt) > ($1.isPinned, $1.createdAt) }
+            .sorted {
+                if $0.isPinned != $1.isPinned {
+                    return $0.isPinned && !$1.isPinned
+                }
+                return $0.createdAt > $1.createdAt
+            }
     }
     
     var body: some View {

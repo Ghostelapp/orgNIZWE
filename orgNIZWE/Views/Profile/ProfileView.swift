@@ -112,7 +112,7 @@ struct ProfileView: View {
                             prefs.onboardingCompleted = false
                             try? context.save()
                         }
-                        .foregroundStyle(.accent)
+                        .foregroundStyle(.accentColor)
                     }
                 }
             }

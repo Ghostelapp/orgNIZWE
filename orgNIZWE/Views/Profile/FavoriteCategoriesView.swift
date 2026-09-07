@@ -15,7 +15,7 @@ struct FavoriteCategoriesView: View {
                     Spacer()
                     if prefs.favoriteCategories.contains(category) {
                         Image(systemName: "checkmark")
-                            .foregroundStyle(.accent)
+                            .foregroundStyle(.accentColor)
                     }
                 }
                 .contentShape(Rectangle())

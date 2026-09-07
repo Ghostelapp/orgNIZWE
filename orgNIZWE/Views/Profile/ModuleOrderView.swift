@@ -10,7 +10,7 @@ struct ModuleOrderView: View {
             ForEach($prefs.dashboardModuleOrder) { $module in
                 HStack {
                     Image(systemName: moduleIcon(for: module))
-                        .foregroundStyle(.accent)
+                        .foregroundStyle(.accentColor)
                     Text(module.rawValue)
                 }
             }

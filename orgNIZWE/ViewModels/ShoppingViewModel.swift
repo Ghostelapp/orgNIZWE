@@ -41,7 +41,7 @@ final class ShoppingViewModel: ObservableObject {
         return commonItems.filter { !existing.contains($0.lowercased()) }.shuffled().prefix(5).map { $0 }
     }
     
-    private func suggestCategory(for item: String) -> ShoppingCategory {
+    func suggestCategory(for item: String) -> ShoppingCategory {
         let lowercased = item.lowercased()
         if ["mleko", "ser", "jogurt", "masło", "śmietana"].contains(where: lowercased.contains) {
             return .dairy

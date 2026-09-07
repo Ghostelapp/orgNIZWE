@@ -103,7 +103,7 @@ enum TaskCategory: String, Codable, CaseIterable {
     }
 }
 
-struct Subtask: Codable, Hashable {
+struct Subtask: Codable, Hashable, Identifiable {
     var id: UUID
     var title: String
     var isCompleted: Bool

@@ -31,7 +31,7 @@ final class NoteItem {
 enum NoteCategory: String, Codable, CaseIterable {
     case general = "Ogólne"
     case idea = "Pomysł"
-    journal = "Dziennik"
+    case journal = "Dziennik"
     case meeting = "Spotkanie"
     case travel = "Podróż"
     

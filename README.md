@@ -102,28 +102,32 @@ Plik: `.github/workflows/ios-build.yml`
 
 Workflow:
 1. Uruchamia się na `macos-latest`.
-2. Wybiera Xcode 15.2.
-3. Buduje główny target aplikacji `orgNIZWE`.
-4. Buduje rozszerzenie widgetów `orgNIZWEWidgets`.
-5. Próbuje uruchomić testy (opcjonalnie).
-6. W przypadku błędu uploaduje logi buildu.
+2. Buduje główny target aplikacji `orgNIZWE`.
+3. Buduje rozszerzenie widgetów `orgNIZWEWidgets`.
+4. Próbuje uruchomić testy (opcjonalnie).
+5. W przypadku błędu uploaduje logi buildu.
 
 Aby workflow zadziałał, wystarczy wypchnąć kod do repozytorium GitHub. GitHub Actions automatycznie wykryje plik w `.github/workflows/`.
 
-### Ręczny build wersji dystrybucyjnej (.ipa)
+### Ręczny build i upload do App Store Connect / TestFlight
 
 Plik: `.github/workflows/ios-release.yml`
 
+Workflow automatycznie:
+1. Archiwizuje aplikację.
+2. Eksportuje plik `.ipa`.
+3. **Uploaduje build do App Store Connect** (pojawi się w TestFlight).
+
 Wymaga skonfigurowania sekretów w repozytorium GitHub:
-- `APPLE_P12_BASE64` — certyfikat deweloperski/dystrybucyjny zakodowany base64
+- `APPLE_P12_BASE64` — certyfikat dystrybucyjny Apple zakodowany base64
 - `APPLE_P12_PASSWORD` — hasło do certyfikatu
 - `APPLE_ISSUER_ID` — Issuer ID z App Store Connect
 - `APPLE_API_KEY_ID` — Key ID z App Store Connect
-- `APPLE_API_PRIVATE_KEY` — klucz prywatny API z App Store Connect
+- `APPLE_API_PRIVATE_KEY` — klucz prywatny API z App Store Connect (cała zawartość pliku `.p8`)
 
-Przed uruchomieniem uzupełnij `ExportOptions.plist` swoim `teamID`.
+Przed uruchomieniem uzupełnij `ExportOptions.plist` swoim `Team ID`.
 
-Workflow uruchamiasz ręcznie z zakładki **Actions → iOS Release Build → Run workflow**, podając numer wersji.
+Workflow uruchamiasz ręcznie z zakładki **Actions → iOS Release Build → Run workflow**, podając numer wersji i numer buildu.
 
 ## Uwagi
 

@@ -16,6 +16,12 @@ jobs:
   archive:
     name: Archive, Export and Upload to App Store Connect
     runs-on: macos-latest
+    env:
+      APPLE_P12_BASE64: ${{ secrets.APPLE_P12_BASE64 || secrets.BUILD_CERTIFICATE_BASE64 || secrets.APPLE_CERTIFICATE_BASE64 }}
+      APPLE_P12_PASSWORD: ${{ secrets.APPLE_P12_PASSWORD || secrets.P12_PASSWORD || secrets.BUILD_CERTIFICATE_PASSWORD }}
+      APPLE_ISSUER_ID: ${{ secrets.APPLE_ISSUER_ID || secrets.APPSTORE_ISSUER_ID }}
+      APPLE_API_KEY_ID: ${{ secrets.APPLE_API_KEY_ID || secrets.APPSTORE_KEY_ID }}
+      APPLE_API_PRIVATE_KEY: ${{ secrets.APPLE_API_PRIVATE_KEY || secrets.APPSTORE_PRIVATE_KEY }}
 
     steps:
       - name: Checkout repository
@@ -24,19 +30,32 @@ jobs:
       - name: Show default Xcode version
         run: xcodebuild -version
 
+      - name: Validate release signing secrets
+        run: |
+          missing=()
+          [[ -n "${APPLE_P12_BASE64}" ]] || missing+=("APPLE_P12_BASE64 (or BUILD_CERTIFICATE_BASE64 / APPLE_CERTIFICATE_BASE64)")
+          [[ -n "${APPLE_P12_PASSWORD}" ]] || missing+=("APPLE_P12_PASSWORD (or P12_PASSWORD / BUILD_CERTIFICATE_PASSWORD)")
+          [[ -n "${APPLE_ISSUER_ID}" ]] || missing+=("APPLE_ISSUER_ID (or APPSTORE_ISSUER_ID)")
+          [[ -n "${APPLE_API_KEY_ID}" ]] || missing+=("APPLE_API_KEY_ID (or APPSTORE_KEY_ID)")
+          [[ -n "${APPLE_API_PRIVATE_KEY}" ]] || missing+=("APPLE_API_PRIVATE_KEY (or APPSTORE_PRIVATE_KEY)")
+          if [ ${#missing[@]} -ne 0 ]; then
+            printf '::error::Missing required secrets: %s\n' "$(IFS=', '; echo "${missing[*]}")"
+            exit 1
+          fi
+
       - name: Install Apple certificate
         uses: apple-actions/import-codesign-certs@v2
         with:
-          p12-file-base64: ${{ secrets.APPLE_P12_BASE64 }}
-          p12-password: ${{ secrets.APPLE_P12_PASSWORD }}
+          p12-file-base64: ${{ env.APPLE_P12_BASE64 }}
+          p12-password: ${{ env.APPLE_P12_PASSWORD }}
 
       - name: Install provisioning profile
         uses: apple-actions/download-provisioning-profiles@v1
         with:
           bundle-id: com.yourcompany.orgNIZWE
-          issuer-id: ${{ secrets.APPLE_ISSUER_ID }}
-          api-key-id: ${{ secrets.APPLE_API_KEY_ID }}
-          api-private-key: ${{ secrets.APPLE_API_PRIVATE_KEY }}
+          issuer-id: ${{ env.APPLE_ISSUER_ID }}
+          api-key-id: ${{ env.APPLE_API_KEY_ID }}
+          api-private-key: ${{ env.APPLE_API_PRIVATE_KEY }}
 
       - name: Update version and build number
         run: |
@@ -63,18 +82,18 @@ jobs:
       - name: Save App Store Connect API key
         run: |
           mkdir -p ${{ runner.temp }}/appstoreconnect
-          echo "${{ secrets.APPLE_API_PRIVATE_KEY }}" > ${{ runner.temp }}/appstoreconnect/AuthKey_${{ secrets.APPLE_API_KEY_ID }}.p8
+          printf '%s' "${{ env.APPLE_API_PRIVATE_KEY }}" > ${{ runner.temp }}/appstoreconnect/AuthKey_${{ env.APPLE_API_KEY_ID }}.p8
 
       - name: Upload IPA to App Store Connect
         run: |
           xcrun altool --upload-app \
             --type ios \
             --file build/orgNIZWE.ipa \
-            --apiKey ${{ secrets.APPLE_API_KEY_ID }} \
-            --apiIssuer ${{ secrets.APPLE_ISSUER_ID }} \
+            --apiKey ${{ env.APPLE_API_KEY_ID }} \
+            --apiIssuer ${{ env.APPLE_ISSUER_ID }} \
             --verbose
         env:
-          ALTOOL_API_KEY_PATH: ${{ runner.temp }}/appstoreconnect/AuthKey_${{ secrets.APPLE_API_KEY_ID }}.p8
+          ALTOOL_API_KEY_PATH: ${{ runner.temp }}/appstoreconnect/AuthKey_${{ env.APPLE_API_KEY_ID }}.p8
 
       - name: Upload IPA artifact
         uses: actions/upload-artifact@v4

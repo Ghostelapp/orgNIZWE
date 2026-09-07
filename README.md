@@ -109,11 +109,80 @@ Workflow:
 
 Aby workflow zadziałał, wystarczy wypchnąć kod do repozytorium GitHub. GitHub Actions automatycznie wykryje plik w `.github/workflows/`.
 
-### TestFlight — krok po kroku
+### TestFlight bez Maca przez Codemagic (polecane)
+
+Jeśli nie masz Maca, najprostsza droga do TestFlight to **Codemagic** — działa podobnie jak Expo EAS Build. Codemagic sam wygeneruje certyfikat, provisioning profile, zbuduje `.ipa` i wyśle build do TestFlight.
+
+Plik konfiguracyjny: `codemagic.yaml`
+
+#### 1. Załóż konto Codemagic
+
+Wejdź na https://codemagic.io i zaloguj się przez GitHub.
+
+#### 2. Podłącz repozytorium
+
+W Codemagic kliknij **Add application → GitHub → Ghostelapp/orgNIZWE**.
+
+#### 3. Zmień Bundle ID
+
+W pliku `orgNIZWE.xcodeproj/project.pbxproj` zamień `com.yourcompany.orgNIZWE` na własny Bundle ID, np. `pl.twojadomena.orgNIZWE`.
+
+W `codemagic.yaml` ustaw zmienną `BUNDLE_ID` w ustawieniach Codemagic lub zostaw domyślną wartość i zmień ją bezpośrednio w pliku.
+
+#### 4. Utwórz App ID i aplikację w App Store Connect
+
+1. Wejdź na https://developer.apple.com/account/resources/identifiers/list
+2. Utwórz nowy **App ID** z Twoim Bundle ID.
+3. Wejdź na https://appstoreconnect.apple.com/apps → **+** → iOS, nazwa `orgNIZWE`, wybierz Bundle ID.
+
+#### 5. Wygeneruj klucz API App Store Connect
+
+1. Wejdź na https://appstoreconnect.apple.com/access/api
+2. Kliknij **+** przy **App Store Connect API**.
+3. Nazwa: `Codemagic`, rola: **Admin** lub **App Manager**.
+4. Pobierz plik `.p8` i zapisz go — **nie da się pobrać ponownie**.
+5. Zanotuj **Issuer ID** i **Key ID**.
+
+#### 6. Dodaj zmienne środowiskowe w Codemagic
+
+W aplikacji orgNIZWE w Codemagic wejdź w **Environment variables** i dodaj:
+
+| Zmienna | Wartość |
+|---|---|
+| `APP_STORE_CONNECT_ISSUER_ID` | Issuer ID z App Store Connect |
+| `APP_STORE_CONNECT_KEY_IDENTIFIER` | Key ID klucza API |
+| `APP_STORE_CONNECT_PRIVATE_KEY` | Cała zawartość pliku `.p8` |
+| `BUNDLE_ID` | Twój Bundle ID, np. `pl.twojadomena.orgNIZWE` |
+| `APP_STORE_APP_ID` | Apple ID aplikacji z App Store Connect (opcjonalnie) |
+
+> **Uwaga:** `APP_STORE_CONNECT_PRIVATE_KEY` to cały tekst z pliku `.p8`, włącznie z liniami `-----BEGIN PRIVATE KEY-----` i `-----END PRIVATE KEY-----`.
+
+#### 7. Uruchom build
+
+1. W Codemagic wybierz workflow **iOS Release to TestFlight**.
+2. Kliknij **Start new build**.
+3. Codemagic automatycznie:
+   - wygeneruje certyfikat i provisioning profile,
+   - zbuduje aplikację,
+   - wyśle build do TestFlight.
+
+Build pojawi się w App Store Connect w ciągu kilku minut.
+
+#### 8. Dodaj testerów
+
+W App Store Connect:
+- **TestFlight → Internal Testing** — członkowie zespołu.
+- **TestFlight → External Testing** — zewnętrzni testerzy lub publiczny link.
+
+---
+
+### TestFlight z własnym certyfikatem (GitHub Actions)
+
+Jeśli masz dostęp do Maca lub już posiadasz certyfikat `.p12`, możesz użyć workflow GitHub Actions.
 
 Plik: `.github/workflows/ios-release.yml`
 
-Workflow automatycznie archiwizuje aplikację, eksportuje `.ipa` i wysyła build do App Store Connect, gdzie pojawi się w **TestFlight**.
+Szczegółowa instrukcja znajduje się w sekcji poniżej.
 
 #### 1. Zmień Bundle Identifier i Team ID
 

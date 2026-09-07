@@ -1,0 +1,69 @@
+# Konfiguracja Codemagic dla orgNIZWE
+# Wymaga konta Codemagic (darmowy plan: 500 minut/miesiąc)
+# oraz App Store Connect API Key dodanej w ustawieniach Codemagic.
+#
+# Zmienne środowiskowe, które musisz dodać w Codemagic:
+#   APP_STORE_CONNECT_ISSUER_ID     -> Issuer ID z App Store Connect
+#   APP_STORE_CONNECT_KEY_IDENTIFIER -> Key ID klucza API
+#   APP_STORE_CONNECT_PRIVATE_KEY   -> Cała zawartość pliku .p8
+#
+# Opcjonalnie możesz też ustawić:
+#   BUNDLE_ID                       -> Twój Bundle ID, np. pl.twojadomena.orgNIZWE
+#   APP_STORE_APP_ID                -> Apple ID aplikacji z App Store Connect (np. 1234567890)
+
+workflows:
+  ios-release:
+    name: iOS Release to TestFlight
+    instance_type: mac_mini_m1
+    max_build_duration: 120
+    environment:
+      ios_signing:
+        distribution_type: app_store
+        bundle_identifier: ${BUNDLE_ID:-com.yourcompany.orgNIZWE}
+      vars:
+        XCODE_PROJECT: "orgNIZWE.xcodeproj"
+        XCODE_SCHEME: "orgNIZWE"
+        IPA_OUTPUT: "build/orgNIZWE.ipa"
+    scripts:
+      - name: Show environment info
+        script: |
+          xcodebuild -version
+          echo "Bundle ID: ${BUNDLE_ID:-com.yourcompany.orgNIZWE}"
+
+      - name: Update version and build number
+        script: |
+          VERSION=${CM_TAG_NAME:-1.0.0}
+          BUILD_NUMBER=${CM_BUILD_ID:-1}
+          echo "Setting version: $VERSION, build: $BUILD_NUMBER"
+          sed -i '' 's/MARKETING_VERSION = 1.0/MARKETING_VERSION = '"$VERSION"'/g' orgNIZWE.xcodeproj/project.pbxproj
+          sed -i '' 's/CURRENT_PROJECT_VERSION = 1/CURRENT_PROJECT_VERSION = '"$BUILD_NUMBER"'/g' orgNIZWE.xcodeproj/project.pbxproj
+
+      - name: Build archive
+        script: |
+          xcodebuild \
+            -project "$XCODE_PROJECT" \
+            -scheme "$XCODE_SCHEME" \
+            -destination 'generic/platform=iOS' \
+            -archivePath build/orgNIZWE.xcarchive \
+            archive
+
+      - name: Export IPA
+        script: |
+          xcodebuild \
+            -exportArchive \
+            -archivePath build/orgNIZWE.xcarchive \
+            -exportPath build \
+            -exportOptionsPlist ExportOptions.plist
+
+    artifacts:
+      - build/*.ipa
+      - build/*.dSYM.zip
+
+    publishing:
+      app_store_connect:
+        api_key: $APP_STORE_CONNECT_PRIVATE_KEY
+        key_id: $APP_STORE_CONNECT_KEY_IDENTIFIER
+        issuer_id: $APP_STORE_CONNECT_ISSUER_ID
+        submit_to_testflight: true
+        # Jeśli masz już utworzoną aplikację w App Store Connect, podaj jej Apple ID:
+        # apple_id: $APP_STORE_APP_ID

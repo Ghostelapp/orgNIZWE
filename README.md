@@ -109,11 +109,54 @@ Workflow:
 
 Aby workflow zadziałał, wystarczy wypchnąć kod do repozytorium GitHub. GitHub Actions automatycznie wykryje plik w `.github/workflows/`.
 
-### TestFlight bez Maca przez Codemagic (polecane)
+### TestFlight bez Maca przez Bitrise (polecane)
 
-Jeśli nie masz Maca, najprostsza droga do TestFlight to **Codemagic** — działa podobnie jak Expo EAS Build. Codemagic sam wygeneruje certyfikat, provisioning profile, zbuduje `.ipa` i wyśle build do TestFlight.
+Jeśli nie masz Maca, najprostszą drogą do TestFlight jest **Bitrise** — działa podobnie jak Expo EAS Build. Bitrise sam wygeneruje certyfikat, provisioning profile, zbuduje `.ipa` i wyśle build do TestFlight.
 
-Plik konfiguracyjny: `codemagic.yaml`
+Plik konfiguracyjny: `bitrise.yml`
+
+#### 1. Załóż konto Bitrise
+
+Wejdź na https://bitrise.io i zaloguj się przez GitHub.
+
+#### 2. Dodaj aplikację
+
+1. Kliknij **Add new app**
+2. Wybierz **GitHub** → `Ghostelapp/orgNIZWE`
+3. Kiedy Bitrise spyta o konfigurację, wybierz **Configure manually** i wskaż plik `bitrise.yml`
+4. Ustaw:
+   - **Project path:** `orgNIZWE.xcodeproj`
+   - **Scheme:** `orgNIZWE`
+   - **Distribution method:** `app-store`
+
+#### 3. Dodaj zmienne środowiskowe
+
+W aplikacji w Bitrise wejdź w **Workflow → Env Vars** i dodaj:
+
+| Zmienna | Wartość |
+|---|---|
+| `APPLE_API_ISSUER_ID` | `f35174b6-7ad2-4b93-80b6-5f8c0c6c6b81` |
+| `APPLE_API_KEY_ID` | `YH5A4WY2J9` |
+| `APPLE_API_KEY` | Cała zawartość pliku `.p8` dla klucza `YH5A4WY2J9` |
+
+Zaznacz **Replace variables in input** i **Sensitive** przy `APPLE_API_KEY`.
+
+#### 4. Uruchom build
+
+1. Wejdź w **Builds → Start/Schedule a Build**
+2. Wybierz workflow **primary**
+3. Kliknij **Start Build**
+
+Bitrise automatycznie:
+- wygeneruje certyfikat i provisioning profile,
+- zbuduje aplikację,
+- wyśle build do TestFlight.
+
+---
+
+### TestFlight bez Maca przez Codemagic
+
+Alternatywnie możesz użyć Codemagic. Plik konfiguracyjny: `codemagic.yaml`
 
 #### 1. Załóż konto Codemagic
 

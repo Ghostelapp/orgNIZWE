@@ -45,6 +45,7 @@ workflows:
             -scheme "$XCODE_SCHEME" \
             -destination 'generic/platform=iOS' \
             -archivePath build/orgNIZWE.xcarchive \
+            -allowProvisioningUpdates \
             archive
 
       - name: Export IPA
@@ -53,7 +54,8 @@ workflows:
             -exportArchive \
             -archivePath build/orgNIZWE.xcarchive \
             -exportPath build \
-            -exportOptionsPlist ExportOptions.plist
+            -exportOptionsPlist ExportOptions.plist \
+            -allowProvisioningUpdates
 
     artifacts:
       - build/*.ipa

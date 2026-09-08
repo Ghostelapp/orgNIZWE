@@ -2,13 +2,10 @@
 # Wymaga konta Codemagic (darmowy plan: 500 minut/miesiąc)
 # oraz App Store Connect API Key dodanej w ustawieniach Codemagic.
 #
-# Zmienne środowiskowe, które musisz dodać w Codemagic:
+# Zmienne środowiskowe, które musisz dodać w Codemagic (grupa app_store_connect):
 #   APP_STORE_CONNECT_ISSUER_ID     -> Issuer ID z App Store Connect
 #   APP_STORE_CONNECT_KEY_IDENTIFIER -> Key ID klucza API
 #   APP_STORE_CONNECT_PRIVATE_KEY   -> Cała zawartość pliku .p8
-#
-# Opcjonalnie możesz też ustawić:
-#   BUNDLE_ID                       -> Twój Bundle ID, np. pl.twojadomena.orgNIZWE
 #   APP_STORE_APP_ID                -> Apple ID aplikacji z App Store Connect (np. 1234567890)
 
 workflows:
@@ -68,4 +65,4 @@ workflows:
         key_id: $APP_STORE_CONNECT_KEY_IDENTIFIER
         issuer_id: $APP_STORE_CONNECT_ISSUER_ID
         submit_to_testflight: true
-        apple_id: "6809706779"
+        apple_id: $APP_STORE_APP_ID

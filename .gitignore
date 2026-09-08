@@ -41,3 +41,7 @@ iOSInjectionProject/
 *.key
 *.pem
 Secrets.swift
+
+# App Store Connect private keys
+AuthKey_*.p8
+

@@ -19,16 +19,17 @@ workflows:
     environment:
       ios_signing:
         distribution_type: app_store
-        bundle_identifier: ${BUNDLE_ID:-com.yourcompany.orgNIZWE}
+        bundle_identifier: com.organizer.aiorganizer
       vars:
         XCODE_PROJECT: "orgNIZWE.xcodeproj"
         XCODE_SCHEME: "orgNIZWE"
         IPA_OUTPUT: "build/orgNIZWE.ipa"
+        BUNDLE_ID: "com.organizer.aiorganizer"
     scripts:
       - name: Show environment info
         script: |
           xcodebuild -version
-          echo "Bundle ID: ${BUNDLE_ID:-com.yourcompany.orgNIZWE}"
+          echo "Bundle ID: $BUNDLE_ID"
 
       - name: Update version and build number
         script: |

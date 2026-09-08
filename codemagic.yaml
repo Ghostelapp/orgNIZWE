@@ -68,5 +68,4 @@ workflows:
         key_id: $APP_STORE_CONNECT_KEY_IDENTIFIER
         issuer_id: $APP_STORE_CONNECT_ISSUER_ID
         submit_to_testflight: true
-        # Jeśli masz już utworzoną aplikację w App Store Connect, podaj jej Apple ID:
-        # apple_id: $APP_STORE_APP_ID
+        apple_id: 6809706779
